@@ -1,0 +1,18 @@
+[project]
+name = "cifor-icraf-grant-finder"
+version = "0.1.0"
+description = "Python Shiny web app for discovering grants relevant to CIFOR-ICRAF (agroforestry, regenerative agriculture, biodiversity, land restoration, soil health)."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "shiny>=1.2.0",
+    "httpx>=0.27.0",
+    "pandas>=2.2.0",
+    "feedparser>=6.0.11",
+    "beautifulsoup4>=4.12.3",
+    "faicons>=0.2.2",
+    "python-dateutil>=2.9.0",
+]
+
+[tool.uv]
+package = false

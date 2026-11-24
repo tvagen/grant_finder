@@ -13,6 +13,7 @@ import pandas as pd
 from shiny import App, reactive, render, ui
 
 from grant_finder.models import ALL_REGIONS, THEMES, Grant, SourceStatus
+from grant_finder.scoring import score_and_tag_grant
 from grant_finder.storage import (
     load_cache,
     load_custom_feeds,
@@ -46,6 +47,24 @@ else:
 APP_DIR = Path(__file__).resolve().parent
 ALL_THEMES = list(THEMES.keys())
 SHORTLIST_STAGES = ["Watching", "Exploring", "Drafting", "Submitted", "Archived"]
+
+EXTERNAL_PORTALS: list[dict[str, str]] = [
+    {
+        "name": "Devex Funding (Open & Forecast)",
+        "url": "https://www.devex.com/funding/r?report=tender-924449&filter%5Bstatuses%5D%5B%5D=forecast&filter%5Bstatuses%5D%5B%5D=open&sorting%5Border%5D=desc&sorting%5Bfield%5D=updated_at",
+        "note": "Requires browser session / Devex Funding login. Export to CSV and upload below to score & filter here.",
+    },
+    {
+        "name": "CEPF — Open Calls for Proposals",
+        "url": "https://www.cepf.net/grants/open-calls-for-proposals",
+        "note": "Biodiversity hotspot small & large grants across Africa, Asia, and Latin America.",
+    },
+    {
+        "name": "Bezos Earth Fund — News & Initiatives",
+        "url": "https://www.bezosearthfund.org/news-and-insights",
+        "note": "Mostly invitation-only; check here for occasional competitive Grand Challenges.",
+    },
+]
 
 
 def _status_badge(status: str) -> ui.Tag:
@@ -245,6 +264,45 @@ app_ui = ui.page_sidebar(
                     ui.output_ui("sources_status_ui"),
                 ),
                 ui.div(
+                    ui.h5("External Portals (Manual / Login Required)", class_="mb-2"),
+                    ui.p(
+                        "Sites behind login or anti-bot gates that cannot be auto-fetched. "
+                        "Open them directly in your browser:",
+                        class_="text-muted small",
+                    ),
+                    *[
+                        ui.div(
+                            ui.div(
+                                ui.strong(p["name"]),
+                                ui.a(
+                                    "Open Portal ↗",
+                                    href=p["url"],
+                                    target="_blank",
+                                    rel="noopener noreferrer",
+                                    class_="btn btn-forest btn-sm",
+                                ),
+                                class_="d-flex justify-content-between align-items-center mb-1",
+                            ),
+                            ui.div(p["note"], class_="small text-muted"),
+                            class_="source-status-card",
+                        )
+                        for p in EXTERNAL_PORTALS
+                    ],
+                    ui.hr(),
+                    ui.h5("Import Grants CSV (e.g., Devex Export)", class_="mb-2"),
+                    ui.p(
+                        "Upload a CSV exported from Devex Funding or another tracker to "
+                        "automatically score, tag by theme/geography, and merge into Explore Grants.",
+                        class_="text-muted small",
+                    ),
+                    ui.input_file(
+                        "import_csv",
+                        None,
+                        accept=[".csv"],
+                        button_label="Choose CSV file",
+                        placeholder="No file selected",
+                    ),
+                    ui.hr(),
                     ui.h5("Add Custom RSS / Atom Feed", class_="mb-2"),
                     ui.p(
                         "Add any donor or regional funding RSS feed (e.g., GEF, CGIAR, "
@@ -316,11 +374,18 @@ def server(input, output, session):
             options={"placeholder": "All countries"},
         )
 
-    # Dynamic source checkboxes (built-in + custom feeds)
+    # Dynamic source checkboxes (built-in + custom feeds + any imported CSV sources)
     @render.ui
     def source_filter_ui():
         custom_names = [f["name"] for f in custom_feeds_rv()]
-        all_sources = BUILTIN_SOURCE_NAMES + custom_names
+        extra_sources = sorted(
+            {
+                g.source
+                for g in grants_rv()
+                if g.source not in BUILTIN_SOURCE_NAMES and g.source not in custom_names
+            }
+        )
+        all_sources = BUILTIN_SOURCE_NAMES + custom_names + extra_sources
         return ui.input_checkbox_group(
             "source_filter",
             None,
@@ -873,6 +938,111 @@ def server(input, output, session):
         save_custom_feeds([])
         custom_feeds_rv.set([])
         ui.notification_show("Cleared custom feeds.", type="message", duration=2)
+
+    # Import CSV (e.g., Devex Funding export or custom spreadsheet)
+    @reactive.effect
+    @reactive.event(input.import_csv)
+    def _on_import_csv():
+        files = input.import_csv()
+        if not files:
+            return
+        file_info = files[0]
+        datapath = file_info.get("datapath")
+        filename = file_info.get("name", "Imported CSV")
+        if not datapath:
+            return
+
+        try:
+            df = pd.read_csv(datapath, dtype=str).fillna("")
+        except Exception as exc:
+            ui.notification_show(f"Could not read CSV: {exc}", type="error", duration=5)
+            return
+
+        if df.empty:
+            ui.notification_show("Uploaded CSV has no rows.", type="warning", duration=4)
+            return
+
+        cols_lower = {c.strip().lower(): c for c in df.columns}
+
+        def _pick(row, candidates: list[str]) -> str:
+            for cand in candidates:
+                for low_col, orig_col in cols_lower.items():
+                    if cand == low_col or cand in low_col:
+                        val = str(row.get(orig_col, "")).strip()
+                        if val:
+                            return val
+            return ""
+
+        source_label = (
+            "Devex (Imported CSV)"
+            if "devex" in filename.lower()
+            else f"CSV Import ({Path(filename).stem[:24]})"
+        )
+        imported: list[Grant] = []
+        for idx, row in df.iterrows():
+            title = _pick(row, ["title", "name", "opportunity", "tender", "call"])
+            if not title:
+                continue
+            funder = _pick(row, ["funder", "donor", "organization", "agency", "client"])
+            status_raw = _pick(row, ["status", "stage"])
+            low_st = status_raw.lower()
+            if "forecast" in low_st or "forthcoming" in low_st:
+                status = "Forthcoming"
+            elif "closed" in low_st or "expired" in low_st:
+                status = "Closed"
+            else:
+                status = "Open"
+            deadline = _pick(row, ["deadline", "closing", "due date", "submission"])
+            amount = _pick(row, ["amount", "budget", "value", "size", "funding"])
+            geo = _pick(row, ["country", "countries", "location", "region", "geography"])
+            url = _pick(row, ["url", "link", "website"]) or EXTERNAL_PORTALS[0]["url"]
+            desc = _pick(row, ["description", "summary", "details", "sector", "notes"])
+            if geo and geo.lower() not in desc.lower():
+                desc = f"{desc} Location: {geo}.".strip()
+
+            g = Grant(
+                id=f"csv-{idx}-{abs(hash(title + url)) % 10**8}",
+                title=title,
+                source=source_label,
+                funder=funder or source_label,
+                url=url,
+                status=status,
+                deadline=deadline[:20],
+                amount=amount,
+                geography=geo or "See opportunity details",
+                description=desc or title,
+            )
+            imported.append(score_and_tag_grant(g))
+
+        if not imported:
+            ui.notification_show(
+                "No grants found — ensure the CSV has a 'Title' or 'Name' column.",
+                type="warning",
+                duration=5,
+            )
+            return
+
+        existing = [g for g in grants_rv() if g.source != source_label]
+        merged = existing + imported
+        merged.sort(key=lambda g: (-g.relevance_score, g.deadline or "9999-99-99"))
+        grants_rv.set(merged)
+
+        st_list = [s for s in statuses_rv() if s.name != source_label]
+        st_list.append(
+            SourceStatus(
+                name=source_label,
+                ok=True,
+                count=len(imported),
+                fetched_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+                message=f"Imported {len(imported)} rows from {filename}.",
+            )
+        )
+        statuses_rv.set(st_list)
+        ui.notification_show(
+            f"Imported {len(imported)} grants from {filename}!",
+            type="message",
+            duration=4,
+        )
 
     # CSV Exports
     @render.download(filename="cifor_icraf_grants.csv")

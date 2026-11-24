@@ -34,3 +34,19 @@ Or directly via the virtual environment:
 ```
 
 Then open `http://127.0.0.1:8000` in your browser.
+
+## Deploying to GitHub Pages (Free, Auto-Updated Daily)
+
+This repository includes a GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) that fetches live grants daily at `06:00 UTC`, exports the app to **Shinylive** (WebAssembly), and deploys it to **GitHub Pages**:
+
+1. Initialize Git and push to a new GitHub repository on the `main` branch:
+   ```bash
+   git init -b main
+   git add .
+   git commit -m "Initial commit: CIFOR-ICRAF Grant Finder"
+   git remote add origin https://github.com/<your-username>/<your-repo>.git
+   git push -u origin main
+   ```
+2. On GitHub, go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**.
+3. The workflow runs automatically on push, every day at `06:00 UTC`, or anytime you click **Run workflow** in the **Actions** tab.
+

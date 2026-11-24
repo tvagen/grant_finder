@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 08:16 UTC",
+  "updated_at": "2026-11-24 08:21 UTC",
   "grants": [
     {
       "id": "eusedia-afe7710b1a85",
@@ -412,33 +412,6 @@
       "opportunity_number": ""
     },
     {
-      "id": "eusedia-ea5aef139971",
-      "title": "Understanding the nature and the extent of the effects of PFAS on biodiversity and ecosystem services",
-      "source": "EU Funding & Tenders",
-      "funder": "EC — Transformative change towards a nature-positive economy and society",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-nature-2027-01-01",
-      "status": "Open",
-      "deadline": "2027-01-14",
-      "published": "2026-10-13",
-      "amount": "€41.4M",
-      "geography": "EU / Horizon Europe & International Partners",
-      "regions": [
-        "Europe"
-      ],
-      "countries": [],
-      "description": "Expected Outcome: Proposals are expected to contribute to all the following expected outcomes: the mechanistic understanding of PFAS (per- and polyfluoroalkyl substances) effects on biodiversity, on ecosystems and on ecosystem services is improved and evaluations of their extent are available; research needs to close knowledge gaps and to address issues on biodiversity and ecosystem services are better identified; the new knowledge can be integrated by policymakers in their decisions related to biodiversity protection and restoration, environmental protection and protection of human health as well as in socio-economic cost-benefit analysis for policy measures on PFAS. Scope: PFAS pollution significantly impacts human health and the environment. Addressing PFAS is notably a flagship action under the Water Resilience Strategy [1] . There is growing evidence on impacts on biodiversity above and below ground and water, but more evidence is needed to substantiate the effects on different species, populations and entire ecosystems, and their extent. A European Commission study published on 29 January 2026 [2] revealed significant knowledge gaps on the effects of PFAS on biodiversity. In…",
-      "themes": [
-        "Biodiversity & Ecosystems"
-      ],
-      "matched_keywords": [
-        "biodiversity",
-        "ecosystem",
-        "species"
-      ],
-      "relevance_score": 40,
-      "opportunity_number": "HORIZON-NATURE-2027-01-01"
-    },
-    {
       "id": "eusedia-744a7c356c07",
       "title": "Living labs co-creating solutions for the restoration of ecosystems addressing implementation bottlenecks and improving resilience to risks",
       "source": "EU Funding & Tenders",
@@ -761,60 +734,6 @@
       ],
       "relevance_score": 33,
       "opportunity_number": "G27AS00166"
-    },
-    {
-      "id": "grantsgo-d84e90f5124e",
-      "title": "Cooperative Agreement for affiliated Partner with Great Rivers Cooperative Ecosystem Studies Unit",
-      "source": "Grants.gov",
-      "funder": "DOI-USGS1",
-      "url": "https://www.grants.gov/search-results-detail/364230",
-      "status": "Open",
-      "deadline": "2026-12-07",
-      "published": "2026-11-05",
-      "amount": "",
-      "geography": "US / International (check eligibility)",
-      "regions": [
-        "North America"
-      ],
-      "countries": [],
-      "description": "Agency: DOI-USGS1. Opportunity Number: G27AS00050. Matched search query: land restoration.",
-      "themes": [
-        "Biodiversity & Ecosystems",
-        "Land & Forest Restoration"
-      ],
-      "matched_keywords": [
-        "ecosystem",
-        "land restoration"
-      ],
-      "relevance_score": 33,
-      "opportunity_number": "G27AS00050"
-    },
-    {
-      "id": "grantsgo-9967c0cb6fcd",
-      "title": "Cooperative Agreement for affiliated Partner with Gulf Coast Cooperative Ecosystem Studies Unit",
-      "source": "Grants.gov",
-      "funder": "DOI-USGS1",
-      "url": "https://www.grants.gov/search-results-detail/364231",
-      "status": "Open",
-      "deadline": "2027-01-05",
-      "published": "2026-11-05",
-      "amount": "",
-      "geography": "US / International (check eligibility)",
-      "regions": [
-        "North America"
-      ],
-      "countries": [],
-      "description": "Agency: DOI-USGS1. Opportunity Number: G27AS00064. Matched search query: regenerative agriculture.",
-      "themes": [
-        "Regenerative Agriculture",
-        "Biodiversity & Ecosystems"
-      ],
-      "matched_keywords": [
-        "regenerative agriculture",
-        "ecosystem"
-      ],
-      "relevance_score": 33,
-      "opportunity_number": "G27AS00064"
     },
     {
       "id": "eusedia-0dfe3d236cf2",
@@ -1411,14 +1330,14 @@
         "North America"
       ],
       "countries": [],
-      "description": "Agency: USDA-FS. Opportunity Number: USDA-FS-2026-GLRI-CFP. Matched search query: forestry.",
+      "description": "Agency: USDA-FS. Opportunity Number: USDA-FS-2026-GLRI-CFP. Matched search query: watershed.",
       "themes": [
         "Biodiversity & Ecosystems",
-        "Land & Forest Restoration"
+        "Water & Watersheds"
       ],
       "matched_keywords": [
         "conservation",
-        "forestry"
+        "watershed"
       ],
       "relevance_score": 26,
       "opportunity_number": "USDA-FS-2026-GLRI-CFP"
@@ -1640,6 +1559,58 @@
       "opportunity_number": "G27AS00081"
     },
     {
+      "id": "grantsgo-d84e90f5124e",
+      "title": "Cooperative Agreement for affiliated Partner with Great Rivers Cooperative Ecosystem Studies Unit",
+      "source": "Grants.gov",
+      "funder": "DOI-USGS1",
+      "url": "https://www.grants.gov/search-results-detail/364230",
+      "status": "Open",
+      "deadline": "2026-12-07",
+      "published": "2026-11-05",
+      "amount": "",
+      "geography": "US / International (check eligibility)",
+      "regions": [
+        "North America"
+      ],
+      "countries": [],
+      "description": "Agency: DOI-USGS1. Opportunity Number: G27AS00050. Matched search query: biodiversity.",
+      "themes": [
+        "Biodiversity & Ecosystems"
+      ],
+      "matched_keywords": [
+        "biodiversity",
+        "ecosystem"
+      ],
+      "relevance_score": 25,
+      "opportunity_number": "G27AS00050"
+    },
+    {
+      "id": "grantsgo-9967c0cb6fcd",
+      "title": "Cooperative Agreement for affiliated Partner with Gulf Coast Cooperative Ecosystem Studies Unit",
+      "source": "Grants.gov",
+      "funder": "DOI-USGS1",
+      "url": "https://www.grants.gov/search-results-detail/364231",
+      "status": "Open",
+      "deadline": "2027-01-05",
+      "published": "2026-11-05",
+      "amount": "",
+      "geography": "US / International (check eligibility)",
+      "regions": [
+        "North America"
+      ],
+      "countries": [],
+      "description": "Agency: DOI-USGS1. Opportunity Number: G27AS00064. Matched search query: biodiversity.",
+      "themes": [
+        "Biodiversity & Ecosystems"
+      ],
+      "matched_keywords": [
+        "biodiversity",
+        "ecosystem"
+      ],
+      "relevance_score": 25,
+      "opportunity_number": "G27AS00064"
+    },
+    {
       "id": "eusedia-31e8d84c57e0",
       "title": "Assessing the performance of policy instruments to inform climate change mitigation action",
       "source": "EU Funding & Tenders",
@@ -1719,33 +1690,6 @@
       "opportunity_number": "HORIZON-NATURE-2027-02-03"
     },
     {
-      "id": "eusedia-41ab87584b2b",
-      "title": "Palaeoclimate science for a better understanding of Earth system dynamics",
-      "source": "EU Funding & Tenders",
-      "funder": "EC — CLIMATE",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2027-01-d1-08",
-      "status": "Open",
-      "deadline": "2027-03-04",
-      "published": "2026-11-17",
-      "amount": "€123.0M",
-      "geography": "EU / Horizon Europe & International Partners",
-      "regions": [
-        "Europe"
-      ],
-      "countries": [],
-      "description": "Expected Outcome: Project results are expected to contribute to some of the following outcomes: Better process understanding of past climate changes at different time scales, their variability and interactions with ecosystems, leading to improved Earth system models; Future climate change scenarios produced in light of past changes in the Earth system, in particular warm climates/high sea-level situations, and abrupt transitions; Identification of thresholds in Earth system components and better characterisation of driving mechanisms and feedbacks that may be responsible for non-linear behaviours, including indicators of abrupt changes, and early warning signals within palaeoclimate records; Synthesis of climate variations that can serve as fundamental basis for IPCC assessments and benchmarks for model inter-comparisons. Scope: Palaeoclimatic (including geological, biological and ice-core) records provide information on the long-term evolution of the climate, as well as the conditions and processes that can drive physical and ecological systems during warm and cold periods, deglaciations and abrupt climatic events. The challenge of the research under this topic is to provide robu…",
-      "themes": [
-        "Biodiversity & Ecosystems",
-        "Climate & Carbon Finance"
-      ],
-      "matched_keywords": [
-        "ecosystem",
-        "climate change"
-      ],
-      "relevance_score": 22,
-      "opportunity_number": "HORIZON-CL5-2027-01-D1-08"
-    },
-    {
       "id": "eusedia-dde55cfcb279",
       "title": "Better understanding and attribution of land and ocean carbon sources and sinks",
       "source": "EU Funding & Tenders",
@@ -1771,6 +1715,33 @@
       ],
       "relevance_score": 22,
       "opportunity_number": "HORIZON-CL5-2027-01-D1-12"
+    },
+    {
+      "id": "eusedia-41ab87584b2b",
+      "title": "Palaeoclimate science for a better understanding of Earth system dynamics",
+      "source": "EU Funding & Tenders",
+      "funder": "EC — CLIMATE",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2027-01-d1-08",
+      "status": "Open",
+      "deadline": "2027-03-04",
+      "published": "2026-11-17",
+      "amount": "€123.0M",
+      "geography": "EU / Horizon Europe & International Partners",
+      "regions": [
+        "Europe"
+      ],
+      "countries": [],
+      "description": "Expected Outcome: Project results are expected to contribute to some of the following outcomes: Better process understanding of past climate changes at different time scales, their variability and interactions with ecosystems, leading to improved Earth system models; Future climate change scenarios produced in light of past changes in the Earth system, in particular warm climates/high sea-level situations, and abrupt transitions; Identification of thresholds in Earth system components and better characterisation of driving mechanisms and feedbacks that may be responsible for non-linear behaviours, including indicators of abrupt changes, and early warning signals within palaeoclimate records; Synthesis of climate variations that can serve as fundamental basis for IPCC assessments and benchmarks for model inter-comparisons. Scope: Palaeoclimatic (including geological, biological and ice-core) records provide information on the long-term evolution of the climate, as well as the conditions and processes that can drive physical and ecological systems during warm and cold periods, deglaciations and abrupt climatic events. The challenge of the research under this topic is to provide robu…",
+      "themes": [
+        "Biodiversity & Ecosystems",
+        "Climate & Carbon Finance"
+      ],
+      "matched_keywords": [
+        "ecosystem",
+        "climate change"
+      ],
+      "relevance_score": 22,
+      "opportunity_number": "HORIZON-CL5-2027-01-D1-08"
     },
     {
       "id": "terraviv-23c26dfb6014",
@@ -1990,6 +1961,56 @@
       ],
       "relevance_score": 14,
       "opportunity_number": "RFA-OH-26-001"
+    },
+    {
+      "id": "grantsgo-b0e6d34d3544",
+      "title": "Southeast New England Program (SNEP) Innovative Restoration Grants",
+      "source": "Grants.gov",
+      "funder": "EPA",
+      "url": "https://www.grants.gov/search-results-detail/364125",
+      "status": "Open",
+      "deadline": "2026-12-11",
+      "published": "2026-10-20",
+      "amount": "",
+      "geography": "US / International (check eligibility)",
+      "regions": [
+        "North America"
+      ],
+      "countries": [],
+      "description": "Agency: EPA. Opportunity Number: EPA-I-R1-SNEP-2026A. Matched search query: biodiversity.",
+      "themes": [
+        "Biodiversity & Ecosystems"
+      ],
+      "matched_keywords": [
+        "biodiversity"
+      ],
+      "relevance_score": 14,
+      "opportunity_number": "EPA-I-R1-SNEP-2026A"
+    },
+    {
+      "id": "grantsgo-bc83805806e9",
+      "title": "Agriculture and Food Research Initiative Competitive Grants Program Foundational and Applied Science Program",
+      "source": "Grants.gov",
+      "funder": "USDA-NIFA",
+      "url": "https://www.grants.gov/search-results-detail/360205",
+      "status": "Open",
+      "deadline": "2026-12-31",
+      "published": "2025-08-01",
+      "amount": "",
+      "geography": "US / International (check eligibility)",
+      "regions": [
+        "North America"
+      ],
+      "countries": [],
+      "description": "Agency: USDA-NIFA. Opportunity Number: USDA-NIFA-AFRI-011134. Matched search query: biodiversity.",
+      "themes": [
+        "Biodiversity & Ecosystems"
+      ],
+      "matched_keywords": [
+        "biodiversity"
+      ],
+      "relevance_score": 14,
+      "opportunity_number": "USDA-NIFA-AFRI-011134"
     },
     {
       "id": "grantsgo-bb8f77d81a80",
@@ -2594,58 +2615,6 @@
       "opportunity_number": "FOR-FD-24-009"
     },
     {
-      "id": "grantsgo-7bc0db6639b3",
-      "title": "Single Source Competition for Biostatistical and Coordinating Center Renewal of the NIDDK CLEAR Study Consortium (Closed-Loop and Education for Hypoglycemia Awareness Restoration) (U24- Resource-Related Research Project, Cooperative Agreements)",
-      "source": "Grants.gov",
-      "funder": "HHS-NIH11",
-      "url": "https://www.grants.gov/search-results-detail/364279",
-      "status": "Forthcoming",
-      "deadline": "",
-      "published": "2026-11-18",
-      "amount": "",
-      "geography": "US / International (check eligibility)",
-      "regions": [
-        "North America"
-      ],
-      "countries": [],
-      "description": "Agency: HHS-NIH11. Opportunity Number: RFA-DK-28-117. Matched search query: land restoration.",
-      "themes": [
-        "Land & Forest Restoration"
-      ],
-      "matched_keywords": [
-        "land restoration"
-      ],
-      "relevance_score": 14,
-      "opportunity_number": "RFA-DK-28-117"
-    },
-    {
-      "id": "grantsgo-2caa029f8a09",
-      "title": "Request for Information (RFI) No.  95332421K0004 - Community Engagement Services for the Solomon Islands Threshold Program",
-      "source": "Grants.gov",
-      "funder": "MCC",
-      "url": "https://www.grants.gov/search-results-detail/331311",
-      "status": "Forthcoming",
-      "deadline": "",
-      "published": "2021-02-04",
-      "amount": "",
-      "geography": "US / International (check eligibility)",
-      "regions": [
-        "Oceania & Pacific"
-      ],
-      "countries": [
-        "Solomon Islands"
-      ],
-      "description": "Agency: MCC. Opportunity Number: 95332421K0004. Matched search query: land restoration.",
-      "themes": [
-        "Land & Forest Restoration"
-      ],
-      "matched_keywords": [
-        "land restoration"
-      ],
-      "relevance_score": 14,
-      "opportunity_number": "95332421K0004"
-    },
-    {
       "id": "grantsgo-a4e345cab274",
       "title": "Long Term Research in Environmental Biology",
       "source": "Grants.gov",
@@ -2921,6 +2890,58 @@
       ],
       "relevance_score": 14,
       "opportunity_number": "MAPUTO-PCO-FY22-01"
+    },
+    {
+      "id": "grantsgo-7bc0db6639b3",
+      "title": "Single Source Competition for Biostatistical and Coordinating Center Renewal of the NIDDK CLEAR Study Consortium (Closed-Loop and Education for Hypoglycemia Awareness Restoration) (U24- Resource-Related Research Project, Cooperative Agreements)",
+      "source": "Grants.gov",
+      "funder": "HHS-NIH11",
+      "url": "https://www.grants.gov/search-results-detail/364279",
+      "status": "Forthcoming",
+      "deadline": "",
+      "published": "2026-11-18",
+      "amount": "",
+      "geography": "US / International (check eligibility)",
+      "regions": [
+        "North America"
+      ],
+      "countries": [],
+      "description": "Agency: HHS-NIH11. Opportunity Number: RFA-DK-28-117. Matched search query: land restoration.",
+      "themes": [
+        "Land & Forest Restoration"
+      ],
+      "matched_keywords": [
+        "land restoration"
+      ],
+      "relevance_score": 14,
+      "opportunity_number": "RFA-DK-28-117"
+    },
+    {
+      "id": "grantsgo-2caa029f8a09",
+      "title": "Request for Information (RFI) No.  95332421K0004 - Community Engagement Services for the Solomon Islands Threshold Program",
+      "source": "Grants.gov",
+      "funder": "MCC",
+      "url": "https://www.grants.gov/search-results-detail/331311",
+      "status": "Forthcoming",
+      "deadline": "",
+      "published": "2021-02-04",
+      "amount": "",
+      "geography": "US / International (check eligibility)",
+      "regions": [
+        "Oceania & Pacific"
+      ],
+      "countries": [
+        "Solomon Islands"
+      ],
+      "description": "Agency: MCC. Opportunity Number: 95332421K0004. Matched search query: land restoration.",
+      "themes": [
+        "Land & Forest Restoration"
+      ],
+      "matched_keywords": [
+        "land restoration"
+      ],
+      "relevance_score": 14,
+      "opportunity_number": "95332421K0004"
     },
     {
       "id": "terraviv-18444b6e058c",
@@ -3603,31 +3624,6 @@
       "opportunity_number": ""
     },
     {
-      "id": "eusedia-9f7b4b5c678d",
-      "title": "Understanding inhabitant’s experiences of neighbourhoods to support their health and well-being",
-      "source": "EU Funding & Tenders",
-      "funder": "EC — Beautiful, inclusive and sustainable neighbourhoods for communities",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-neb-2026-01-participation-03",
-      "status": "Open",
-      "deadline": "2026-12-01",
-      "published": "2026-05-05",
-      "amount": "€101.1M",
-      "geography": "EU / Horizon Europe & International Partners",
-      "regions": [
-        "Europe"
-      ],
-      "countries": [],
-      "description": "Expected Outcome: Project results are expected to contribute to all of the following expected outcomes: Robust evidence on how inhabitants experience their neighbourhood [1] and the impact of these experiences on their health and well-being. The research informs policies, strategies, neighbourhood planning and procurement for the green transition [1] of neighbourhoods, including their nature-positive [3] transformation and climate resilience. Scope: Neighbourhoods are human-social constructs and environments. They are shaped by complex inter-connections and interdependencies of human and non-human actors in the natural and built environment [1] they comprise. An increasing body of research is looking at the relationship between people and the built environment, from neuro-architectural aspects of space to atmosphere and ambiance aspects in urban design and planning, influencing also the perception of beauty. Digitalisation is also allowing to understand, map and enhance how inhabitants experience the built environment. Yet, more evidence is needed on how inhabitants react to and identify with their neighbourhoods as well as the effects of these experiences on their physical and me…",
-      "themes": [
-        "Climate & Carbon Finance"
-      ],
-      "matched_keywords": [
-        "climate resilience"
-      ],
-      "relevance_score": 7,
-      "opportunity_number": "HORIZON-NEB-2026-01-PARTICIPATION-03"
-    },
-    {
       "id": "eusedia-21f23069eb1b",
       "title": "Advancing sustainable maintenance and repair measures for existing buildings",
       "source": "EU Funding & Tenders",
@@ -3651,31 +3647,6 @@
       ],
       "relevance_score": 7,
       "opportunity_number": "HORIZON-NEB-2026-01-REGEN-02"
-    },
-    {
-      "id": "grantsgo-b0e6d34d3544",
-      "title": "Southeast New England Program (SNEP) Innovative Restoration Grants",
-      "source": "Grants.gov",
-      "funder": "EPA",
-      "url": "https://www.grants.gov/search-results-detail/364125",
-      "status": "Open",
-      "deadline": "2026-12-11",
-      "published": "2026-10-20",
-      "amount": "",
-      "geography": "US / International (check eligibility)",
-      "regions": [
-        "North America"
-      ],
-      "countries": [],
-      "description": "Agency: EPA. Opportunity Number: EPA-I-R1-SNEP-2026A. Matched search query: watershed.",
-      "themes": [
-        "Water & Watersheds"
-      ],
-      "matched_keywords": [
-        "watershed"
-      ],
-      "relevance_score": 7,
-      "opportunity_number": "EPA-I-R1-SNEP-2026A"
     },
     {
       "id": "grantsgo-ee55884325d9",
@@ -3726,31 +3697,6 @@
       ],
       "relevance_score": 7,
       "opportunity_number": "SWMFY27"
-    },
-    {
-      "id": "grantsgo-bc83805806e9",
-      "title": "Agriculture and Food Research Initiative Competitive Grants Program Foundational and Applied Science Program",
-      "source": "Grants.gov",
-      "funder": "USDA-NIFA",
-      "url": "https://www.grants.gov/search-results-detail/360205",
-      "status": "Open",
-      "deadline": "2026-12-31",
-      "published": "2025-08-01",
-      "amount": "",
-      "geography": "US / International (check eligibility)",
-      "regions": [
-        "North America"
-      ],
-      "countries": [],
-      "description": "Agency: USDA-NIFA. Opportunity Number: USDA-NIFA-AFRI-011134. Matched search query: forestry.",
-      "themes": [
-        "Land & Forest Restoration"
-      ],
-      "matched_keywords": [
-        "forestry"
-      ],
-      "relevance_score": 7,
-      "opportunity_number": "USDA-NIFA-AFRI-011134"
     },
     {
       "id": "grantsgo-d351e9a9183b",
@@ -3828,31 +3774,6 @@
       "opportunity_number": "IMCAP-2027-INFOME"
     },
     {
-      "id": "grantsgo-a98b5d29f467",
-      "title": "Landscape Scale Restoration Grant Program for Non-Federal Lands",
-      "source": "Grants.gov",
-      "funder": "USDA-FS",
-      "url": "https://www.grants.gov/search-results-detail/364144",
-      "status": "Open",
-      "deadline": "2027-01-26",
-      "published": "2026-10-28",
-      "amount": "",
-      "geography": "US / International (check eligibility)",
-      "regions": [
-        "North America"
-      ],
-      "countries": [],
-      "description": "Agency: USDA-FS. Opportunity Number: USDA-FS-2026-LSR. Matched search query: forestry.",
-      "themes": [
-        "Land & Forest Restoration"
-      ],
-      "matched_keywords": [
-        "forestry"
-      ],
-      "relevance_score": 7,
-      "opportunity_number": "USDA-FS-2026-LSR"
-    },
-    {
       "id": "grantsgo-d614965fb468",
       "title": "Landscape Scale Restoration Grant Program for Tribes",
       "source": "Grants.gov",
@@ -3867,15 +3788,40 @@
         "North America"
       ],
       "countries": [],
-      "description": "Agency: USDA-FS. Opportunity Number: USDA-FS-2026-LSR-TRIBAL. Matched search query: forestry.",
+      "description": "Agency: USDA-FS. Opportunity Number: USDA-FS-2026-LSR-TRIBAL. Matched search query: watershed.",
       "themes": [
-        "Land & Forest Restoration"
+        "Water & Watersheds"
       ],
       "matched_keywords": [
-        "forestry"
+        "watershed"
       ],
       "relevance_score": 7,
       "opportunity_number": "USDA-FS-2026-LSR-TRIBAL"
+    },
+    {
+      "id": "grantsgo-a98b5d29f467",
+      "title": "Landscape Scale Restoration Grant Program for Non-Federal Lands",
+      "source": "Grants.gov",
+      "funder": "USDA-FS",
+      "url": "https://www.grants.gov/search-results-detail/364144",
+      "status": "Open",
+      "deadline": "2027-01-26",
+      "published": "2026-10-28",
+      "amount": "",
+      "geography": "US / International (check eligibility)",
+      "regions": [
+        "North America"
+      ],
+      "countries": [],
+      "description": "Agency: USDA-FS. Opportunity Number: USDA-FS-2026-LSR. Matched search query: watershed.",
+      "themes": [
+        "Water & Watersheds"
+      ],
+      "matched_keywords": [
+        "watershed"
+      ],
+      "relevance_score": 7,
+      "opportunity_number": "USDA-FS-2026-LSR"
     },
     {
       "id": "grantsgo-a03ca31fc0bf",
@@ -4436,11 +4382,11 @@
       "opportunity_number": "HORIZON-CL5-2026-11-D3-23"
     },
     {
-      "id": "eusedia-6b97d8ef465a",
-      "title": "Addressing homelessness through housing-led approaches aligned with the New European Bauhaus",
+      "id": "eusedia-b78e4690c4b7",
+      "title": "Understanding capital market dynamics for increased investment in New European Bauhaus projects in neighbourhoods",
       "source": "EU Funding & Tenders",
       "funder": "EC — Beautiful, inclusive and sustainable neighbourhoods for communities",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-neb-2026-01-participation-01",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-neb-2026-01-business-02",
       "status": "Open",
       "deadline": "2026-12-01",
       "published": "2026-05-05",
@@ -4450,11 +4396,11 @@
         "Europe"
       ],
       "countries": [],
-      "description": "Expected Outcome: Project results are expected to contribute to all of the following expected outcomes: Housing-led approaches [1] aligned with the NEB are made available to stakeholders involved in tackling homelessness [1] . Robust evidence on NEB-aligned housing-led approaches tackling homelessness (including people temporarily hosted by acquaintances and family) to inform the development and/or update of policies and services for prevention and early intervention in the context of the green transition [1] in neighbourhoods [1] . Scope: Social and affordable housing is being advanced in the EU, including through the Affordable Housing Initiative [5] . Despite efforts, current policies for the green transition are failing to adequately address the housing crisis. Homelessness remains a structural challenge across Europe, with negative impacts on both individuals experiencing it (e.g. physical and mental health, social and economic conditions) and neighbourhood communities [1] (e.g. pressure on public services, erosion of social fabric [1] , etc.). Research and innovation gaps in tackling homelessness range from data collection (i.e. the variety of approaches to defining, measuri…",
+      "description": "Expected Outcome: Project results are expected to contribute to all of the following expected outcomes: Project promoters, public authorities, and investors have a better understanding of the capital market demand and supply dynamics that underlie investments in projects fostering the transformation of neighbourhoods [1] in line with the New European Bauhaus (NEB). Increased investments towards NEB-aligned projects for the sustainable [1] and inclusive [1] transformation of neighbourhoods. Scope: Increased investment in projects for the transformation of neighbourhoods in line with the New European Bauhaus (NEB) may be hindered due to a discrepancy between the demand and supply of capital in terms of size, diversity, returns, and risk. Small-scale NEB-aligned projects typically encounter large, short-term oriented, and highly risk-averse investment funds, which seek investment opportunities able to absorb large amounts of funding, driven by present legislation [4] . Place-based impact investing is an approach that can contribute to investments in NEB-aligned neighbourhood projects by providing risk-adjusted financial returns while creating local social, cultural, aesthetic [5] and…",
       "themes": [],
       "matched_keywords": [],
       "relevance_score": 0,
-      "opportunity_number": "HORIZON-NEB-2026-01-PARTICIPATION-01"
+      "opportunity_number": "HORIZON-NEB-2026-01-BUSINESS-02"
     },
     {
       "id": "eusedia-0e505608a2a1",
@@ -4476,6 +4422,27 @@
       "matched_keywords": [],
       "relevance_score": 0,
       "opportunity_number": "HORIZON-NEB-2026-01-PARTICIPATION-02"
+    },
+    {
+      "id": "eusedia-851dabd1c4a6",
+      "title": "Approaches to reuse vacant, obsolete or underutilised spaces",
+      "source": "EU Funding & Tenders",
+      "funder": "EC — Beautiful, inclusive and sustainable neighbourhoods for communities",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-neb-2026-01-business-03",
+      "status": "Open",
+      "deadline": "2026-12-01",
+      "published": "2026-05-05",
+      "amount": "€101.1M",
+      "geography": "EU / Horizon Europe & International Partners",
+      "regions": [
+        "Europe"
+      ],
+      "countries": [],
+      "description": "Expected Outcome: Project results are expected to contribute to all of the following expected outcomes: An increased number of local authorities systematically identify and quantify vacant, obsolete or underutilised spaces for reuse in neighbourhoods [1] in a context-sensitive way to address local community [1] challenges and needs. Increase in renovated, renatured, or converted spaces that address local community challenges and needs. Scope: Europe’s housing needs, inefficient use of the existing building stock, environmental commitments, and the EU’s goal of “no net land take” by 2050 make a compelling case for reusing the significant number of existing spaces, including buildings and infrastructure, that are vacant, obsolete or underutilised. In Europe, there are, for instance, an estimated 19,000 km² of underutilised brownfield land and 300 km² of vacant or underutilised office space [3] . The reuse of vacant, obsolete or underutilised spaces, following circularity [1] and sufficiency principles, can help address community challenges and needs thanks to their typical proximity and connection to essential infrastructure and services. While vacant, obsolete or underutilised spac…",
+      "themes": [],
+      "matched_keywords": [],
+      "relevance_score": 0,
+      "opportunity_number": "HORIZON-NEB-2026-01-BUSINESS-03"
     },
     {
       "id": "eusedia-c6b4b50ce9e4",
@@ -5795,23 +5762,23 @@
       "name": "Grants.gov",
       "ok": true,
       "count": 77,
-      "fetched_at": "2026-11-24 08:16 UTC",
+      "fetched_at": "2026-11-24 08:21 UTC",
       "message": "Fetched 77 opportunities across 7 queries.",
       "url": "https://www.grants.gov"
     },
     {
       "name": "EU Funding & Tenders",
       "ok": true,
-      "count": 68,
-      "fetched_at": "2026-11-24 08:16 UTC",
-      "message": "Fetched 68 open/forthcoming EU calls.",
+      "count": 67,
+      "fetched_at": "2026-11-24 08:21 UTC",
+      "message": "Fetched 67 open/forthcoming EU calls.",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/"
     },
     {
       "name": "UKRI Funding Finder",
       "ok": true,
       "count": 20,
-      "fetched_at": "2026-11-24 08:16 UTC",
+      "fetched_at": "2026-11-24 08:21 UTC",
       "message": "Fetched 20 UKRI opportunities.",
       "url": "https://www.ukri.org/opportunity/"
     },
@@ -5819,7 +5786,7 @@
       "name": "Terra Viva Grants",
       "ok": true,
       "count": 40,
-      "fetched_at": "2026-11-24 08:16 UTC",
+      "fetched_at": "2026-11-24 08:21 UTC",
       "message": "Fetched 40 grants from Terra Viva.",
       "url": "https://www.terravivagrants.org"
     },
@@ -5827,7 +5794,7 @@
       "name": "FundsforNGOs",
       "ok": true,
       "count": 25,
-      "fetched_at": "2026-11-24 08:16 UTC",
+      "fetched_at": "2026-11-24 08:21 UTC",
       "message": "Fetched 25 grants across FundsforNGOs feeds.",
       "url": "https://www2.fundsforngos.org"
     }

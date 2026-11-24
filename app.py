@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import io
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -12,7 +13,6 @@ import pandas as pd
 from shiny import App, reactive, render, ui
 
 from grant_finder.models import ALL_REGIONS, THEMES, Grant, SourceStatus
-from grant_finder.sources import BUILTIN_SOURCES, fetch_all_sources
 from grant_finder.storage import (
     load_cache,
     load_custom_feeds,
@@ -22,9 +22,24 @@ from grant_finder.storage import (
     save_shortlist,
 )
 
+IS_SHINYLIVE = sys.platform == "emscripten" or "pyodide" in sys.modules
+
+if not IS_SHINYLIVE:
+    from grant_finder.sources import BUILTIN_SOURCES, fetch_all_sources
+
+    BUILTIN_SOURCE_NAMES = list(BUILTIN_SOURCES.keys())
+else:
+    fetch_all_sources = None
+    BUILTIN_SOURCE_NAMES = [
+        "Grants.gov",
+        "EU Funding & Tenders",
+        "UKRI Funding Finder",
+        "Terra Viva Grants",
+        "FundsforNGOs",
+    ]
+
 APP_DIR = Path(__file__).resolve().parent
 ALL_THEMES = list(THEMES.keys())
-BUILTIN_SOURCE_NAMES = list(BUILTIN_SOURCES.keys())
 SHORTLIST_STAGES = ["Watching", "Exploring", "Drafting", "Submitted", "Archived"]
 
 
@@ -58,7 +73,14 @@ def _theme_badges(themes: list[str]) -> list[ui.Tag]:
 app_ui = ui.page_sidebar(
     ui.sidebar(
         ui.div(
-            ui.input_action_button(
+            ui.div(
+                fa.icon_svg("calendar-check", margin_right="0.35rem"),
+                "Auto-synced daily via GitHub Actions",
+                class_="small text-center py-2 px-2 mb-1 rounded-3",
+                style="background: rgba(94, 75, 139, 0.12); color: #3b2f63; font-weight: 600;",
+            )
+            if IS_SHINYLIVE
+            else ui.input_action_button(
                 "refresh_btn",
                 "Refresh Live Feeds",
                 icon=fa.icon_svg("arrows-rotate"),
@@ -336,6 +358,13 @@ def server(input, output, session):
 
     # Live fetch coroutine triggered by Refresh button (or when adding custom feed)
     async def _run_refresh() -> None:
+        if IS_SHINYLIVE or fetch_all_sources is None:
+            ui.notification_show(
+                "Live browser fetching is disabled on static GitHub Pages; data refreshes daily via GitHub Actions.",
+                type="message",
+                duration=4,
+            )
+            return
         with ui.Progress(min=0, max=1) as p:
             p.set(0.2, message="Fetching live grant portals & RSS feeds...")
             grants, statuses = await fetch_all_sources(
@@ -363,10 +392,10 @@ def server(input, output, session):
     async def _on_refresh():
         await _run_refresh()
 
-    # Auto-fetch on first launch if no cache exists
+    # Auto-fetch on first launch if no cache exists (local server only)
     @reactive.effect
     async def _initial_fetch_if_empty():
-        if not grants_rv():
+        if not grants_rv() and not IS_SHINYLIVE:
             await _run_refresh()
 
     # Filtered grants reactive calc

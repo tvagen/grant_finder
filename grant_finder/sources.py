@@ -754,7 +754,412 @@ async def fetch_iki(client: httpx.AsyncClient) -> tuple[list[Grant], SourceStatu
 
 
 # ---------------------------------------------------------------------------
-# 7. Custom RSS / Atom feeds (user-configurable)
+# 7. IDRC — International Development Research Centre (Canada)
+# ---------------------------------------------------------------------------
+async def fetch_idrc(client: httpx.AsyncClient) -> tuple[list[Grant], SourceStatus]:
+    base_url = "https://idrc-crdi.ca"
+    index_url = f"{base_url}/en/funding"
+    skip_paths = {
+        "/en/funding",
+        "/en/funding/",
+        "/en/funding/applying",
+        "/en/funding/managing-funds",
+        "/en/funding/resources-idrc-grantees",
+        "/en/funding/applying-funding",
+    }
+    try:
+        resp = await client.get(index_url, follow_redirects=True)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        call_links: dict[str, str] = {}
+        for a in soup.find_all("a", href=True):
+            href = str(a["href"]).split("#")[0].strip()
+            if not href.startswith("/en/funding/") or href in skip_paths:
+                continue
+            title = " ".join(a.get_text(" ", strip=True).split())
+            if len(title) < 12:
+                continue
+            full_url = f"{base_url}{href}"
+            if full_url not in call_links:
+                call_links[full_url] = title
+
+        sem = asyncio.Semaphore(5)
+
+        async def _fetch_one(url: str, fallback_title: str) -> Grant:
+            desc = ""
+            deadline = ""
+            title = fallback_title
+            async with sem:
+                try:
+                    r = await client.get(url, follow_redirects=True)
+                    if r.status_code == 200:
+                        psoup = BeautifulSoup(r.text, "html.parser")
+                        main = psoup.find("main") or psoup
+                        h1 = main.find("h1")
+                        if h1:
+                            t = " ".join(h1.get_text(" ", strip=True).split())
+                            if t:
+                                title = t
+                        paras = [
+                            " ".join(p.get_text(" ", strip=True).split())
+                            for p in main.find_all(["p", "li"])
+                        ]
+                        body = " ".join(p for p in paras if len(p) > 20)
+                        desc = body[:1200].rstrip() + ("…" if len(body) > 1200 else "")
+                        deadline = _extract_deadline_from_text(body)
+                except Exception:
+                    pass
+
+            g = Grant(
+                id=_make_id("idrc", url),
+                title=title,
+                source="IDRC (Canada)",
+                funder="International Development Research Centre (IDRC)",
+                url=url,
+                status="Open",
+                deadline=deadline,
+                geography="Developing Countries / Global South",
+                description=desc or fallback_title,
+            )
+            return score_and_tag_grant(g)
+
+        grants = list(
+            await asyncio.gather(*(_fetch_one(u, t) for u, t in call_links.items()))
+        )
+        return grants, SourceStatus(
+            name="IDRC (Canada)",
+            ok=len(grants) > 0,
+            count=len(grants),
+            fetched_at=_now_iso(),
+            message=f"Fetched {len(grants)} open calls from IDRC.",
+            url=index_url,
+        )
+    except Exception as exc:
+        return [], SourceStatus(
+            name="IDRC (Canada)",
+            ok=False,
+            count=0,
+            fetched_at=_now_iso(),
+            message=f"Unavailable: {exc}",
+            url=index_url,
+        )
+
+
+# ---------------------------------------------------------------------------
+# 8. Darwin Initiative (UK Biodiversity Challenge Funds)
+# ---------------------------------------------------------------------------
+async def fetch_darwin_initiative(
+    client: httpx.AsyncClient,
+) -> tuple[list[Grant], SourceStatus]:
+    base_url = "https://www.darwininitiative.org.uk"
+    index_url = f"{base_url}/apply/"
+    try:
+        resp = await client.get(index_url, follow_redirects=True)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+        main = soup.find("main") or soup
+        full_text = " ".join(main.get_text(" ", strip=True).split())
+
+        # Extract core Darwin funding schemes described on /apply/
+        schemes = [
+            (
+                "Darwin Initiative — Main Grants",
+                "£100,000 – £600,000",
+                "Supports biodiversity conservation and multidimensional poverty reduction "
+                "projects in eligible low- and middle-income countries (ODA-eligible).",
+            ),
+            (
+                "Darwin Initiative — Extra Grants",
+                "£600,000 – £5,000,000",
+                "Supports scaling of proven, evidence-based biodiversity conservation, "
+                "ecosystem restoration, and sustainable livelihood projects in LMICs.",
+            ),
+            (
+                "Darwin Initiative — Capability & Capacity Grants",
+                "£50,000 – £200,000",
+                "Builds local organizational capability and institutional capacity for "
+                "biodiversity conservation and sustainable natural resource management.",
+            ),
+            (
+                "Darwin Initiative — Innovation Grants",
+                "£10,000 – £200,000",
+                "Tests and pilots novel approaches to biodiversity conservation, land "
+                "restoration, and poverty reduction in developing countries.",
+            ),
+        ]
+        round_match = re.search(r"Round\s+\d+", full_text, flags=re.IGNORECASE)
+        round_suffix = f" ({round_match.group(0)})" if round_match else ""
+        deadline = _extract_deadline_from_text(full_text)
+
+        grants: list[Grant] = []
+        for title, amt, desc in schemes:
+            g = Grant(
+                id=_make_id("darwin", title),
+                title=f"{title}{round_suffix}",
+                source="Darwin Initiative (UK)",
+                funder="UK Government (Defra / FCDO Biodiversity Challenge Funds)",
+                url=index_url,
+                status="Open",
+                deadline=deadline,
+                amount=amt,
+                geography="ODA-Eligible Developing Countries",
+                description=desc,
+            )
+            grants.append(score_and_tag_grant(g))
+
+        return grants, SourceStatus(
+            name="Darwin Initiative (UK)",
+            ok=True,
+            count=len(grants),
+            fetched_at=_now_iso(),
+            message=f"Indexed {len(grants)} Darwin Initiative funding schemes{round_suffix}.",
+            url=index_url,
+        )
+    except Exception as exc:
+        return [], SourceStatus(
+            name="Darwin Initiative (UK)",
+            ok=False,
+            count=0,
+            fetched_at=_now_iso(),
+            message=f"Unavailable: {exc}",
+            url=index_url,
+        )
+
+
+# ---------------------------------------------------------------------------
+# 9. FFAR — Foundation for Food & Agriculture Research
+# ---------------------------------------------------------------------------
+async def fetch_ffar(client: httpx.AsyncClient) -> tuple[list[Grant], SourceStatus]:
+    index_url = "https://foundationfar.org/grants-funding/open-opportunities/"
+    try:
+        resp = await client.get(index_url, follow_redirects=True)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        items: dict[str, tuple[str, str]] = {}  # url -> (title, status)
+        for a in soup.find_all("a", href=True):
+            href = str(a["href"]).strip()
+            if "/grants-funding/opportunities/" not in href or href.rstrip("/") == index_url.rstrip("/"):
+                continue
+            raw_txt = " ".join(a.get_text(" ", strip=True).split())
+            if len(raw_txt) < 10:
+                continue
+            low = raw_txt.lower()
+            if "accepting submissions" in low or "open" in low:
+                status = "Open"
+            elif "upcoming" in low or "coming soon" in low:
+                status = "Forthcoming"
+            elif "under review" in low or "closed" in low:
+                status = "Closed"
+            else:
+                status = "Open"
+            # Strip trailing status badge text from title
+            clean_title = re.sub(
+                r"\s*(Accepting Submissions|Applications are under review|Closed|Upcoming)\s*$",
+                "",
+                raw_txt,
+                flags=re.IGNORECASE,
+            ).strip()
+            if href not in items:
+                items[href] = (clean_title or raw_txt, status)
+
+        grants: list[Grant] = []
+        for url, (title, status) in items.items():
+            g = Grant(
+                id=_make_id("ffar", url),
+                title=title,
+                source="FFAR (Food & Ag Research)",
+                funder="Foundation for Food & Agriculture Research (FFAR)",
+                url=url,
+                status=status,
+                geography="US / International Research Partnerships",
+                description=(
+                    f"FFAR research funding opportunity: {title}. Focus areas include "
+                    "soil health, sustainable and regenerative agriculture, food systems, "
+                    "and climate-resilient crops and livestock."
+                ),
+            )
+            grants.append(score_and_tag_grant(g))
+
+        return grants, SourceStatus(
+            name="FFAR (Food & Ag Research)",
+            ok=len(grants) > 0,
+            count=len(grants),
+            fetched_at=_now_iso(),
+            message=f"Fetched {len(grants)} FFAR opportunities.",
+            url=index_url,
+        )
+    except Exception as exc:
+        return [], SourceStatus(
+            name="FFAR (Food & Ag Research)",
+            ok=False,
+            count=0,
+            fetched_at=_now_iso(),
+            message=f"Unavailable: {exc}",
+            url=index_url,
+        )
+
+
+# ---------------------------------------------------------------------------
+# 10. Belmont Forum — Collaborative Research Actions (CRAs)
+# ---------------------------------------------------------------------------
+async def fetch_belmont_forum(
+    client: httpx.AsyncClient,
+) -> tuple[list[Grant], SourceStatus]:
+    index_url = "https://www.belmontforum.org/cras/"
+    try:
+        resp = await client.get(index_url, follow_redirects=True)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+        main = soup.find("main") or soup
+
+        grants: list[Grant] = []
+        seen_titles: set[str] = set()
+        for h in main.find_all(["h2", "h3"]):
+            title = " ".join(h.get_text(" ", strip=True).split())
+            if not title or len(title) < 10 or title.lower().startswith("connect with"):
+                continue
+            if title in seen_titles:
+                continue
+            seen_titles.add(title)
+            container = h.parent
+            link_tag = h.find("a", href=True) or (
+                container.find("a", href=True) if container else None
+            )
+            url = str(link_tag["href"]).strip() if link_tag else index_url
+            if url.startswith("/"):
+                url = f"https://www.belmontforum.org{url}"
+            desc = (
+                " ".join(container.get_text(" ", strip=True).split())[:1000]
+                if container
+                else title
+            )
+            deadline = _extract_deadline_from_text(desc)
+            g = Grant(
+                id=_make_id("belmont", f"{title}-{url}"),
+                title=f"Belmont Forum CRA — {title}",
+                source="Belmont Forum",
+                funder="Belmont Forum (International Consortium)",
+                url=url,
+                status="Open",
+                deadline=deadline,
+                geography="Multilateral / Global Research Consortia",
+                description=desc,
+            )
+            grants.append(score_and_tag_grant(g))
+
+        return grants, SourceStatus(
+            name="Belmont Forum",
+            ok=len(grants) > 0,
+            count=len(grants),
+            fetched_at=_now_iso(),
+            message=f"Fetched {len(grants)} Belmont Forum Collaborative Research Actions.",
+            url=index_url,
+        )
+    except Exception as exc:
+        return [], SourceStatus(
+            name="Belmont Forum",
+            ok=False,
+            count=0,
+            fetched_at=_now_iso(),
+            message=f"Unavailable: {exc}",
+            url=index_url,
+        )
+
+
+# ---------------------------------------------------------------------------
+# 11. Gates Foundation — Grand Challenges
+# ---------------------------------------------------------------------------
+async def fetch_gates_grand_challenges(
+    client: httpx.AsyncClient,
+) -> tuple[list[Grant], SourceStatus]:
+    urls = [
+        "https://gcgh.grandchallenges.org/grant-opportunities",
+        "https://www.grandchallenges.org/grant-opportunities",
+    ]
+    grants: list[Grant] = []
+    seen_urls: set[str] = set()
+    errors: list[str] = []
+
+    for index_url in urls:
+        try:
+            resp = await client.get(index_url, follow_redirects=True)
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, "html.parser")
+            base = "https://gcgh.grandchallenges.org" if "gcgh" in index_url else "https://www.grandchallenges.org"
+
+            for a in soup.find_all("a", href=True):
+                href = str(a["href"]).strip()
+                if not any(
+                    seg in href.lower()
+                    for seg in ("/grant-opportunity/", "/challenge/", "/challenges/")
+                ):
+                    continue
+                if href.startswith("/"):
+                    href = f"{base}{href}"
+                if href in seen_urls:
+                    continue
+                title = " ".join(a.get_text(" ", strip=True).split())
+                if len(title) < 15:
+                    continue
+                seen_urls.add(href)
+                parent_txt = (
+                    " ".join(a.parent.get_text(" ", strip=True).split())[:900]
+                    if a.parent
+                    else title
+                )
+                g = Grant(
+                    id=_make_id("gates", href),
+                    title=title,
+                    source="Gates Grand Challenges",
+                    funder="Gates Foundation / Grand Challenges",
+                    url=href,
+                    status="Open",
+                    deadline=_extract_deadline_from_text(parent_txt),
+                    geography="Global / Low- and Middle-Income Countries",
+                    description=parent_txt,
+                )
+                grants.append(score_and_tag_grant(g))
+        except Exception as exc:
+            errors.append(str(exc))
+
+    # When no active round is currently open, keep a clean portal tracker entry
+    if not grants and not errors:
+        g = Grant(
+            id=_make_id("gates", "portal-watch"),
+            title="Gates Foundation — Grand Challenges (Monitor Rolling Open Calls)",
+            source="Gates Grand Challenges",
+            funder="Gates Foundation / Grand Challenges",
+            url="https://gcgh.grandchallenges.org/grant-opportunities",
+            status="Forthcoming",
+            geography="Global / Low- and Middle-Income Countries",
+            description=(
+                "No open RFP rounds detected on Grand Challenges today. Rolling calls "
+                "periodically open for agricultural development, climate adaptation, "
+                "smallholder resilience, and global development."
+            ),
+        )
+        grants.append(score_and_tag_grant(g))
+
+    ok = len(grants) > 0
+    msg = (
+        f"Fetched {len(grants)} Grand Challenges items."
+        if ok
+        else f"Unavailable: {'; '.join(errors[:2])}"
+    )
+    return grants, SourceStatus(
+        name="Gates Grand Challenges",
+        ok=ok,
+        count=len(grants),
+        fetched_at=_now_iso(),
+        message=msg,
+        url="https://gcgh.grandchallenges.org/grant-opportunities",
+    )
+
+
+# ---------------------------------------------------------------------------
+# 12. Custom RSS / Atom feeds (user-configurable)
 # ---------------------------------------------------------------------------
 async def fetch_custom_rss(
     client: httpx.AsyncClient, name: str, feed_url: str
@@ -814,6 +1219,10 @@ BUILTIN_SOURCES: dict[str, Any] = {
     "Terra Viva Grants": fetch_terra_viva,
     "FundsforNGOs": fetch_funds_for_ngos,
     "IKI (Intl Climate Initiative)": fetch_iki,
+    "IDRC (Canada)": fetch_idrc,
+    "Darwin Initiative (UK)": fetch_darwin_initiative,
+    "FFAR (Food & Ag Research)": fetch_ffar,
+    "Gates Grand Challenges": fetch_gates_grand_challenges,
 }
 
 

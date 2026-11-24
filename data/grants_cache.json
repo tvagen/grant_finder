@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 08:40 UTC",
+  "updated_at": "2026-11-24 11:27 UTC",
   "grants": [
     {
       "id": "eusedia-afe7710b1a85",
@@ -66,6 +66,49 @@
         "land restoration",
         "forestry",
         "sustainable forest",
+        "developing countries",
+        "global south"
+      ],
+      "relevance_score": 100,
+      "opportunity_number": ""
+    },
+    {
+      "id": "idrc-984836e96d2c",
+      "title": "IDRC invites applications for the John G. Bene Fellowship 2026",
+      "source": "IDRC (Canada)",
+      "funder": "International Development Research Centre (IDRC)",
+      "url": "https://idrc-crdi.ca/en/funding/idrc-invites-applications-john-g-bene-fellowship-2026",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "Developing Countries / Global South",
+      "regions": [
+        "North America",
+        "Global / Developing Countries"
+      ],
+      "countries": [
+        "Canada"
+      ],
+      "description": "IDRC has helped graduate students undertake research in the field of international development since 1982. The Bene fellowship, a bequest from the estate of John G. Bene, is offered to Canadians and permanent residents of Canada pursuing master’s or doctoral studies at a Canadian university. Candidates should have an academic background that combines an interest in forests (landscape and forest management and restoration, forestry, agroforestry), environment, ecology and food systems, with a social sciences lens (gender and inclusion, Indigenous knowledge and science, biodiversity conservation, governance of nature). This fellowship aims to facilitate practical field research on gender-responsive integrated forest, landscape and food systems restoration and management including within fire prone, degraded or disputed landscapes. Linking the broader climate-food-inclusivity nexus, it emphasizes nature-based solutions and approaches that have the potential to drive transformative change for smallholder farmers, including youth, women, and Indigenous communities in developing countries. The successful candidate will propose research that benefits less privileged people in developing c…",
+      "themes": [
+        "Agroforestry & Trees",
+        "Regenerative Agriculture",
+        "Biodiversity & Ecosystems",
+        "Land & Forest Restoration",
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "agroforestry",
+        "smallholder",
+        "food systems",
+        "biodiversity",
+        "conservation",
+        "nature-based solution",
+        "forestry",
+        "indigenous",
+        "gender",
+        "youth",
         "developing countries",
         "global south"
       ],
@@ -196,6 +239,71 @@
         "conservation",
         "climate change",
         "drought"
+      ],
+      "relevance_score": 58,
+      "opportunity_number": ""
+    },
+    {
+      "id": "idrc-07adcc55d4af",
+      "title": "Global call for research concept notes: climate-smart livestock systems",
+      "source": "IDRC (Canada)",
+      "funder": "International Development Research Centre (IDRC)",
+      "url": "https://idrc-crdi.ca/en/funding/global-call-research-concept-notes-climate-smart-livestock-systems",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "CAD13.5 million",
+      "geography": "Developing Countries / Global South",
+      "regions": [
+        "Africa",
+        "North America",
+        "Global / Developing Countries"
+      ],
+      "countries": [
+        "Canada"
+      ],
+      "description": "The Bill & Melinda Gates Foundation, the UK’s Foreign, Commonwealth & Development Office and Canada’s International Development Research Centre (IDRC) are investing an initial CAD13.5 million to lead, through IDRC, a fund for climate-smart livestock systems (CSLS) in Africa. The focus of the fund will be to develop new climate-smart livestock technologies and business models to improve animal productivity, promote climate adaptation and lower emission intensity for smallholder livestock farmers in climatic hotspots in Africa. The CSLS programming will have two streams of research: climate-smart innovations in livestock systems delivery models to commercialize and scale mature climate-smart innovations The CSLS will be implemented under two main streams, a first cohort of projects dealing with development of climate-smart technologies and innovations and a second one focussing on efficient ways or business models to deliver any scalable mature technologies to the farmers. This call for concept notes is for the climate-smart innovations in livestock systems research stream. Four thematic areas have been identified as being research priorities for CSLS program: water, pastures and fee…",
+      "themes": [
+        "Regenerative Agriculture",
+        "Climate & Carbon Finance",
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "smallholder",
+        "climate adaptation",
+        "developing countries",
+        "africa",
+        "global south"
+      ],
+      "relevance_score": 58,
+      "opportunity_number": ""
+    },
+    {
+      "id": "darwin-076421396491",
+      "title": "Darwin Initiative — Innovation Grants (Round 32)",
+      "source": "Darwin Initiative (UK)",
+      "funder": "UK Government (Defra / FCDO Biodiversity Challenge Funds)",
+      "url": "https://www.darwininitiative.org.uk/apply/",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "£10,000 – £200,000",
+      "geography": "ODA-Eligible Developing Countries",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "Tests and pilots novel approaches to biodiversity conservation, land restoration, and poverty reduction in developing countries.",
+      "themes": [
+        "Biodiversity & Ecosystems",
+        "Land & Forest Restoration",
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "biodiversity",
+        "conservation",
+        "land restoration",
+        "developing countries"
       ],
       "relevance_score": 58,
       "opportunity_number": ""
@@ -421,6 +529,64 @@
       "opportunity_number": ""
     },
     {
+      "id": "darwin-294ee985ae83",
+      "title": "Darwin Initiative — Extra Grants (Round 32)",
+      "source": "Darwin Initiative (UK)",
+      "funder": "UK Government (Defra / FCDO Biodiversity Challenge Funds)",
+      "url": "https://www.darwininitiative.org.uk/apply/",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "£600,000 – £5,000,000",
+      "geography": "ODA-Eligible Developing Countries",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "Supports scaling of proven, evidence-based biodiversity conservation, ecosystem restoration, and sustainable livelihood projects in LMICs.",
+      "themes": [
+        "Biodiversity & Ecosystems",
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "biodiversity",
+        "ecosystem",
+        "conservation",
+        "livelihood",
+        "developing countries"
+      ],
+      "relevance_score": 50,
+      "opportunity_number": ""
+    },
+    {
+      "id": "ffar-8e70ea91d1cd",
+      "title": "Sustainable Food Systems Initiative: Focus on Food",
+      "source": "FFAR (Food & Ag Research)",
+      "funder": "Foundation for Food & Agriculture Research (FFAR)",
+      "url": "https://foundationfar.org/grants-funding/opportunities/sustainable-food-systems-initiative-focus-on-food/",
+      "status": "Closed",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "US / International Research Partnerships",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "FFAR research funding opportunity: Sustainable Food Systems Initiative: Focus on Food. Focus areas include soil health, sustainable and regenerative agriculture, food systems, and climate-resilient crops and livestock.",
+      "themes": [
+        "Regenerative Agriculture",
+        "Soil Health & Carbon"
+      ],
+      "matched_keywords": [
+        "regenerative agriculture",
+        "food systems",
+        "soil health"
+      ],
+      "relevance_score": 47,
+      "opportunity_number": ""
+    },
+    {
       "id": "terraviv-fc3c93f11423",
       "title": "Antarctic Wildlife Research Fund — Krill Fishing and Marine Ecosystem",
       "source": "Terra Viva Grants",
@@ -504,6 +670,344 @@
         "conservation",
         "developing countries",
         "global south"
+      ],
+      "relevance_score": 43,
+      "opportunity_number": ""
+    },
+    {
+      "id": "idrc-87d7af609b86",
+      "title": "Call for letters of interest: Addressing neglected areas of sexual and reproductive health and rights in sub-Saharan Africa (ANeSA)",
+      "source": "IDRC (Canada)",
+      "funder": "International Development Research Centre (IDRC)",
+      "url": "https://idrc-crdi.ca/en/funding/call-letters-interest-addressing-neglected-areas-sexual-and-reproductive-health-and-0",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "up to CAD 1.2 million",
+      "geography": "Developing Countries / Global South",
+      "regions": [
+        "Africa",
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "Addressing Neglected Areas of Sexual and Reproductive Health and Rights in sub-Saharan Africa (ANeSA) is launching Stage 1 of a two-stage funding opportunity to support Cohort 2 of Implementation Research Teams. The initiative will fund implementation research focused on sustainable, evidence-informed and gender-transformative interventions that address neglected areas of sexual and reproductive health and rights for under-served populations in sub-Saharan Africa. Up to six grants of up to CAD 1.2 million each will be awarded, and up to 12 applicants will be invited to advance to the Full Proposal stage. Successful projects will address at least one of ANeSA’s five priority areas: Improving access to family planning and contraceptive services Expanding access to safe abortion care, where legally permitted, and post-abortion care (APAC) Upholding SRHR rights and ensuring access to services for adolescents Preventing sexual- and gender-based violence (SGBV) and improving services for people experiencing SGBV Strengthening advocacy for SRHR For more information, please consult the Call for Letters of Interest. This call is open to Implementation Research Teams led by a sub-Saharan Afr…",
+      "themes": [
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "gender",
+        "developing countries",
+        "sub-saharan africa",
+        "africa",
+        "global south"
+      ],
+      "relevance_score": 43,
+      "opportunity_number": ""
+    },
+    {
+      "id": "ffar-9a5088b3648a",
+      "title": "Efficient Fertilizer Consortium 2026 Request for Applications",
+      "source": "FFAR (Food & Ag Research)",
+      "funder": "Foundation for Food & Agriculture Research (FFAR)",
+      "url": "https://foundationfar.org/grants-funding/opportunities/efficient-fertilizer-consortium-2026-request-for-applications/",
+      "status": "Closed",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "US / International Research Partnerships",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "FFAR research funding opportunity: Efficient Fertilizer Consortium 2026 Request for Applications. Focus areas include soil health, sustainable and regenerative agriculture, food systems, and climate-resilient crops and livestock.",
+      "themes": [
+        "Regenerative Agriculture",
+        "Soil Health & Carbon"
+      ],
+      "matched_keywords": [
+        "regenerative agriculture",
+        "food systems",
+        "soil health"
+      ],
+      "relevance_score": 43,
+      "opportunity_number": ""
+    },
+    {
+      "id": "ffar-a37c475c1e61",
+      "title": "International Consortium for Antimicrobial Stewardship in Agriculture (ICASA) 2026 RFA",
+      "source": "FFAR (Food & Ag Research)",
+      "funder": "Foundation for Food & Agriculture Research (FFAR)",
+      "url": "https://foundationfar.org/grants-funding/opportunities/international-consortium-for-antimicrobial-stewardship-in-agriculture-icasa-2026-rfa/",
+      "status": "Closed",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "US / International Research Partnerships",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "FFAR research funding opportunity: International Consortium for Antimicrobial Stewardship in Agriculture (ICASA) 2026 RFA. Focus areas include soil health, sustainable and regenerative agriculture, food systems, and climate-resilient crops and livestock.",
+      "themes": [
+        "Regenerative Agriculture",
+        "Soil Health & Carbon"
+      ],
+      "matched_keywords": [
+        "regenerative agriculture",
+        "food systems",
+        "soil health"
+      ],
+      "relevance_score": 43,
+      "opportunity_number": ""
+    },
+    {
+      "id": "ffar-58c103497278",
+      "title": "New Innovator in Food & Agriculture Research Award Contingent on Funding Availability",
+      "source": "FFAR (Food & Ag Research)",
+      "funder": "Foundation for Food & Agriculture Research (FFAR)",
+      "url": "https://foundationfar.org/grants-funding/opportunities/new-innovator-in-food-agriculture-research-award-contingent-on-funding-availability/",
+      "status": "Closed",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "US / International Research Partnerships",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "FFAR research funding opportunity: New Innovator in Food & Agriculture Research Award Contingent on Funding Availability. Focus areas include soil health, sustainable and regenerative agriculture, food systems, and climate-resilient crops and livestock.",
+      "themes": [
+        "Regenerative Agriculture",
+        "Soil Health & Carbon"
+      ],
+      "matched_keywords": [
+        "regenerative agriculture",
+        "food systems",
+        "soil health"
+      ],
+      "relevance_score": 43,
+      "opportunity_number": ""
+    },
+    {
+      "id": "ffar-ed70aa36a0d5",
+      "title": "Enhancing the Flavor of Plant-based & Fermentation-derived Proteins RFA",
+      "source": "FFAR (Food & Ag Research)",
+      "funder": "Foundation for Food & Agriculture Research (FFAR)",
+      "url": "https://foundationfar.org/grants-funding/opportunities/enhancing-the-flavor-of-plant-based-and-fermentation-derived-proteins-rfa/",
+      "status": "Closed",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "US / International Research Partnerships",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "FFAR research funding opportunity: Enhancing the Flavor of Plant-based & Fermentation-derived Proteins RFA. Focus areas include soil health, sustainable and regenerative agriculture, food systems, and climate-resilient crops and livestock.",
+      "themes": [
+        "Regenerative Agriculture",
+        "Soil Health & Carbon"
+      ],
+      "matched_keywords": [
+        "regenerative agriculture",
+        "food systems",
+        "soil health"
+      ],
+      "relevance_score": 43,
+      "opportunity_number": ""
+    },
+    {
+      "id": "ffar-206da13e5b54",
+      "title": "Crop-Animal Systems Research RFA",
+      "source": "FFAR (Food & Ag Research)",
+      "funder": "Foundation for Food & Agriculture Research (FFAR)",
+      "url": "https://foundationfar.org/grants-funding/opportunities/crop-animal-systems-research-rfa/",
+      "status": "Closed",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "US / International Research Partnerships",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "FFAR research funding opportunity: Crop-Animal Systems Research RFA. Focus areas include soil health, sustainable and regenerative agriculture, food systems, and climate-resilient crops and livestock.",
+      "themes": [
+        "Regenerative Agriculture",
+        "Soil Health & Carbon"
+      ],
+      "matched_keywords": [
+        "regenerative agriculture",
+        "food systems",
+        "soil health"
+      ],
+      "relevance_score": 43,
+      "opportunity_number": ""
+    },
+    {
+      "id": "ffar-acfa1f81f9d9",
+      "title": "Dairy Health, Efficiency & Resource Dynamics Initiative",
+      "source": "FFAR (Food & Ag Research)",
+      "funder": "Foundation for Food & Agriculture Research (FFAR)",
+      "url": "https://foundationfar.org/grants-funding/opportunities/dairy-health-efficiency-resource-dynamics-initiative/",
+      "status": "Closed",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "US / International Research Partnerships",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "FFAR research funding opportunity: Dairy Health, Efficiency & Resource Dynamics Initiative. Focus areas include soil health, sustainable and regenerative agriculture, food systems, and climate-resilient crops and livestock.",
+      "themes": [
+        "Regenerative Agriculture",
+        "Soil Health & Carbon"
+      ],
+      "matched_keywords": [
+        "regenerative agriculture",
+        "food systems",
+        "soil health"
+      ],
+      "relevance_score": 43,
+      "opportunity_number": ""
+    },
+    {
+      "id": "ffar-932a44487073",
+      "title": "Understanding Impacts of Hub Farm Resources in Adopting Beneficial Agriculture Practices",
+      "source": "FFAR (Food & Ag Research)",
+      "funder": "Foundation for Food & Agriculture Research (FFAR)",
+      "url": "https://foundationfar.org/grants-funding/opportunities/understanding-impacts-of-hub-farm-resources-in-expanding-adoption-of-regenerative-agriculture-practices/",
+      "status": "Closed",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "US / International Research Partnerships",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "FFAR research funding opportunity: Understanding Impacts of Hub Farm Resources in Adopting Beneficial Agriculture Practices. Focus areas include soil health, sustainable and regenerative agriculture, food systems, and climate-resilient crops and livestock.",
+      "themes": [
+        "Regenerative Agriculture",
+        "Soil Health & Carbon"
+      ],
+      "matched_keywords": [
+        "regenerative agriculture",
+        "food systems",
+        "soil health"
+      ],
+      "relevance_score": 43,
+      "opportunity_number": ""
+    },
+    {
+      "id": "ffar-397083cd7087",
+      "title": "Resilient Agriculture Finance and Insurance Research Collaborative",
+      "source": "FFAR (Food & Ag Research)",
+      "funder": "Foundation for Food & Agriculture Research (FFAR)",
+      "url": "https://foundationfar.org/grants-funding/opportunities/resilient-agriculture-finance-and-insurance-research-collaborative/",
+      "status": "Closed",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "US / International Research Partnerships",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "FFAR research funding opportunity: Resilient Agriculture Finance and Insurance Research Collaborative. Focus areas include soil health, sustainable and regenerative agriculture, food systems, and climate-resilient crops and livestock.",
+      "themes": [
+        "Regenerative Agriculture",
+        "Soil Health & Carbon"
+      ],
+      "matched_keywords": [
+        "regenerative agriculture",
+        "food systems",
+        "soil health"
+      ],
+      "relevance_score": 43,
+      "opportunity_number": ""
+    },
+    {
+      "id": "ffar-88fed08a94c8",
+      "title": "FFAR-OCP Disruptive Fertilizer Technology Fellowship Program",
+      "source": "FFAR (Food & Ag Research)",
+      "funder": "Foundation for Food & Agriculture Research (FFAR)",
+      "url": "https://foundationfar.org/grants-funding/opportunities/ffar-ocp-disruptive-fertilizer-technology-fellowship-program/",
+      "status": "Closed",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "US / International Research Partnerships",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "FFAR research funding opportunity: FFAR-OCP Disruptive Fertilizer Technology Fellowship Program. Focus areas include soil health, sustainable and regenerative agriculture, food systems, and climate-resilient crops and livestock.",
+      "themes": [
+        "Regenerative Agriculture",
+        "Soil Health & Carbon"
+      ],
+      "matched_keywords": [
+        "regenerative agriculture",
+        "food systems",
+        "soil health"
+      ],
+      "relevance_score": 43,
+      "opportunity_number": ""
+    },
+    {
+      "id": "ffar-cf6e86c9520b",
+      "title": "Greenhouses in Transition",
+      "source": "FFAR (Food & Ag Research)",
+      "funder": "Foundation for Food & Agriculture Research (FFAR)",
+      "url": "https://foundationfar.org/grants-funding/opportunities/greenhouses-in-transition/",
+      "status": "Closed",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "US / International Research Partnerships",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "FFAR research funding opportunity: Greenhouses in Transition. Focus areas include soil health, sustainable and regenerative agriculture, food systems, and climate-resilient crops and livestock.",
+      "themes": [
+        "Regenerative Agriculture",
+        "Soil Health & Carbon"
+      ],
+      "matched_keywords": [
+        "regenerative agriculture",
+        "food systems",
+        "soil health"
+      ],
+      "relevance_score": 43,
+      "opportunity_number": ""
+    },
+    {
+      "id": "ffar-f0ee208ce263",
+      "title": "Submit a Research Idea",
+      "source": "FFAR (Food & Ag Research)",
+      "funder": "Foundation for Food & Agriculture Research (FFAR)",
+      "url": "https://foundationfar.org/grants-funding/opportunities/submit-a-research-idea/",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "US / International Research Partnerships",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "FFAR research funding opportunity: Submit a Research Idea. Focus areas include soil health, sustainable and regenerative agriculture, food systems, and climate-resilient crops and livestock.",
+      "themes": [
+        "Regenerative Agriculture",
+        "Soil Health & Carbon"
+      ],
+      "matched_keywords": [
+        "regenerative agriculture",
+        "food systems",
+        "soil health"
       ],
       "relevance_score": 43,
       "opportunity_number": ""
@@ -604,6 +1108,69 @@
         "youth"
       ],
       "relevance_score": 40,
+      "opportunity_number": ""
+    },
+    {
+      "id": "idrc-6b2d539faf30",
+      "title": "Supporting STISA 2034: SGCI Multilateral Research Call advancing Africa’s Science, Technology and Innovation priorities",
+      "source": "IDRC (Canada)",
+      "funder": "International Development Research Centre (IDRC)",
+      "url": "https://idrc-crdi.ca/en/funding/supporting-stisa-2034-sgci-multilateral-research-call-advancing-africas-science-technology",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "Developing Countries / Global South",
+      "regions": [
+        "Africa",
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "The SGCI Multilateral Research Call in support of STISA-2034 will fund collaborative, multi-country research projects that advance Africa’s science, technology and innovation priorities and contribute to sustainable development outcomes across the continent. The call supports research aligned with five thematic streams: Artificial intelligence and Digital technologies Through this call, the Science Granting Councils Initiative (SGCI) seeks to: Support high-quality research that addresses regional development challenges Strengthen cross-border partnership Promote the use of evidence in policy and practice Consortia must include institutions from multiple participating SGCI countries and demonstrate how their proposed research contributes to national and continental priorities. The call aims to strengthen Africa’s science, technology and innovation ecosystem while generating knowledge and innovations that support inclusive and sustainable development. Applications must be submitted by a consortium consisting of one lead applicant organization and two to four co-applicant organizations from participating SGCI countries. All applicant organizations must: Be eligible institution types N…",
+      "themes": [
+        "Biodiversity & Ecosystems",
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "ecosystem",
+        "developing countries",
+        "africa",
+        "global south"
+      ],
+      "relevance_score": 40,
+      "opportunity_number": ""
+    },
+    {
+      "id": "idrc-c20c504c06f3",
+      "title": "Call for concept notes: Socio-economic impacts of artificial intelligence in Africa",
+      "source": "IDRC (Canada)",
+      "funder": "International Development Research Centre (IDRC)",
+      "url": "https://idrc-crdi.ca/en/funding/call-concept-notes-socio-economic-impacts-artificial-intelligence-africa",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "Developing Countries / Global South",
+      "regions": [
+        "Africa",
+        "Europe",
+        "Global / Developing Countries"
+      ],
+      "countries": [
+        "United Kingdom"
+      ],
+      "description": "The International Development Research Centre (IDRC) and the United Kingdom’s Foreign, Commonwealth and Development Office (FCDO), as part of the Artificial Intelligence for Development (AI4D) program, are pleased to announce a call for concept notes on the socio-economic impacts of artificial intelligence (AI) in Africa. This call supports research that explores how AI is reshaping labour markets, productivity, and inequality across Africa, supporting policy makers to ensure AI works for everyone, especially the most vulnerable. We invite concept notes that explore the socio-economic impacts of AI in African LMICs, with a focus on differential impacts, inequality and marginalized populations. Projects should address key knowledge gaps and generate evidence to guide responsible AI policies. Responsible AI is safe, inclusive, rights-based, ethical, and sustainable AI. Research should align with one or more of the following themes: Labour and Livelihoods: How AI is transforming labour markets and employment, especially for youth and informal workers. Productivity and Economic Transformation: The role of AI in reshaping sectors and supporting inclusive growth. Poverty and Inequality:…",
+      "themes": [
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "livelihood",
+        "youth",
+        "developing countries",
+        "africa",
+        "global south"
+      ],
+      "relevance_score": 39,
       "opportunity_number": ""
     },
     {
@@ -747,6 +1314,123 @@
         "biodiversity",
         "wildlife",
         "conservation"
+      ],
+      "relevance_score": 36,
+      "opportunity_number": ""
+    },
+    {
+      "id": "idrc-963ac6d7d4f8",
+      "title": "The Science Granting Councils Initiative (SGCI) in sub-Saharan Africa call for proposals to support the establishment and operationalization of the Capacity Strengthening Hub",
+      "source": "IDRC (Canada)",
+      "funder": "International Development Research Centre (IDRC)",
+      "url": "https://idrc-crdi.ca/en/funding/science-granting-councils-initiative-sgci-sub-saharan-africa-call-proposals-support",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "Developing Countries / Global South",
+      "regions": [
+        "Africa",
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "This funding opportunity supports the establishment and operationalization of the Capacity Strengthening Hub under Phase III of the Science Granting Councils Initiative (SGCI-3). The Hub will play a coordinating role in strengthening the research and innovation management capacities of Science Granting Councils (SGCs) across sub-Saharan Africa. Working under the strategic guidance of the Capacity Strengthening Committee (CSC) and in close collaboration with the Program Management Team (PMT), the Hub will coordinate annual capacity-strengthening plans, manage a digital-learning and knowledge-sharing platform and support monitoring, evaluation and learning related to institutional development. It will also facilitate communication, peer exchange and feedback across participating Councils and technical partners. The Hub will not directly deliver training, mentoring, or technical assistance, as these activities will be funded and implemented separately under SGCI-3. This funding opportunity is open to legally registered organizations based in sub-Saharan Africa, applying either individually or as the lead organization of a consortium, with demonstrated expertise in research and innovat…",
+      "themes": [
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "developing countries",
+        "sub-saharan africa",
+        "africa",
+        "global south"
+      ],
+      "relevance_score": 36,
+      "opportunity_number": ""
+    },
+    {
+      "id": "idrc-e0ee6a9a68e6",
+      "title": "Women’s Voice and Leadership Learning Partnership: Regional Learning Hubs",
+      "source": "IDRC (Canada)",
+      "funder": "International Development Research Centre (IDRC)",
+      "url": "https://idrc-crdi.ca/en/funding/womens-voice-and-leadership-learning-partnership-regional-learning-hubs",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "Developing Countries / Global South",
+      "regions": [
+        "North America",
+        "Global / Developing Countries"
+      ],
+      "countries": [
+        "Canada"
+      ],
+      "description": "Global Affairs Canada and IDRC are supporting a Learning Partnership to enhance the efforts and impacts of the flagship program, Women’s Voice and Leadership, renewed in 2023. This call for proposals seeks to recruit four organizations (or consortia of organizations) for the Learning Partnership’s Regional Learning Hubs. The hubs will support localized learning, evidence generation and knowledge sharing among women’s rights organizations, LGBTQI+ groups and their networks. They will complement the Global Learning Hub by anchoring learning activities in regional contexts and ensuring that insights are grounded in local realities. Each hub will co-lead a participatory process to contextualize the co-created learning agenda. This includes overseeing region-specific learning priorities, questions and approaches that reflect the lived experiences and advocacy strategies of local actors. Each hub will also be responsible for organizing region-specific convenings and virtual engagements, fostering vibrant learning ecosystems that strengthen advocacy and interventions to advance gender equality. This call for proposals is intended for women’s rights and feminist organizations or consortia…",
+      "themes": [
+        "Biodiversity & Ecosystems",
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "ecosystem",
+        "gender",
+        "developing countries",
+        "global south"
+      ],
+      "relevance_score": 36,
+      "opportunity_number": ""
+    },
+    {
+      "id": "darwin-b62e0895fb9f",
+      "title": "Darwin Initiative — Main Grants (Round 32)",
+      "source": "Darwin Initiative (UK)",
+      "funder": "UK Government (Defra / FCDO Biodiversity Challenge Funds)",
+      "url": "https://www.darwininitiative.org.uk/apply/",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "£100,000 – £600,000",
+      "geography": "ODA-Eligible Developing Countries",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "Supports biodiversity conservation and multidimensional poverty reduction projects in eligible low- and middle-income countries (ODA-eligible).",
+      "themes": [
+        "Biodiversity & Ecosystems",
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "biodiversity",
+        "conservation",
+        "developing countries"
+      ],
+      "relevance_score": 36,
+      "opportunity_number": ""
+    },
+    {
+      "id": "darwin-1483d9caae59",
+      "title": "Darwin Initiative — Capability & Capacity Grants (Round 32)",
+      "source": "Darwin Initiative (UK)",
+      "funder": "UK Government (Defra / FCDO Biodiversity Challenge Funds)",
+      "url": "https://www.darwininitiative.org.uk/apply/",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "£50,000 – £200,000",
+      "geography": "ODA-Eligible Developing Countries",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "Builds local organizational capability and institutional capacity for biodiversity conservation and sustainable natural resource management.",
+      "themes": [
+        "Biodiversity & Ecosystems",
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "biodiversity",
+        "conservation",
+        "developing countries"
       ],
       "relevance_score": 36,
       "opportunity_number": ""
@@ -1332,6 +2016,63 @@
       "opportunity_number": ""
     },
     {
+      "id": "idrc-e01ffb0b401b",
+      "title": "Connecting Indigenous Research Leadership in Canada and the Global South",
+      "source": "IDRC (Canada)",
+      "funder": "International Development Research Centre (IDRC)",
+      "url": "https://idrc-crdi.ca/en/funding/connecting-indigenous-research-leadership-canada-and-global-south",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "up to CAD700,000",
+      "geography": "Developing Countries / Global South",
+      "regions": [
+        "North America",
+        "Global / Developing Countries"
+      ],
+      "countries": [
+        "Canada"
+      ],
+      "description": "IDRC is pleased to announce a call for proposals to connect Indigenous research and leadership in Canada and in the Global South to complement the Tri-agency strategic funding opportunity Indigenous Capacity and Leadership in Research Connection Grants being led by the Social Sciences and Humanities Research Council (SSHRC). This call is open to Indigenous organizations or organizations supporting Indigenous-led research programs based in the Global South. If you are an organization based in Canada, please consult the Tri-agency strategic funding . The call expects to fund up to seven grants for Indigenous organizations in the Global South that are interested in connecting with First Nations, Métis and Inuit communities in Canada through knowledge-sharing activities. These activities aim to co-develop an interdisciplinary, Indigenous research agenda and build alliances between Indigenous researchers in the Global South and First Nations, Métis and Inuit researchers in Canada, potentially leading to broader joint research endeavors in the future. IDRC will allocate up to CAD700,000 through this call, with projects receiving up to CAD100,000 each. Each individual project will be 12 m…",
+      "themes": [
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "indigenous",
+        "developing countries",
+        "global south"
+      ],
+      "relevance_score": 29,
+      "opportunity_number": ""
+    },
+    {
+      "id": "gates-e154b58942ac",
+      "title": "Gates Foundation — Grand Challenges (Monitor Rolling Open Calls)",
+      "source": "Gates Grand Challenges",
+      "funder": "Gates Foundation / Grand Challenges",
+      "url": "https://gcgh.grandchallenges.org/grant-opportunities",
+      "status": "Forthcoming",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "Global / Low- and Middle-Income Countries",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "No open RFP rounds detected on Grand Challenges today. Rolling calls periodically open for agricultural development, climate adaptation, smallholder resilience, and global development.",
+      "themes": [
+        "Regenerative Agriculture",
+        "Climate & Carbon Finance"
+      ],
+      "matched_keywords": [
+        "smallholder",
+        "climate adaptation"
+      ],
+      "relevance_score": 29,
+      "opportunity_number": ""
+    },
+    {
       "id": "grantsgo-a3b596488a83",
       "title": "Cooperative Agreement for affiliated Partner with the Pacific Northwest Cooperative Ecosystem Studies Unit",
       "source": "Grants.gov",
@@ -1735,6 +2476,47 @@
       "opportunity_number": "HORIZON-CL5-2027-01-D1-09"
     },
     {
+      "id": "idrc-ae430ad41434",
+      "title": "Anticipatory call for proposals for research teams — Adolescents Thrive: African Adolescents Bolstered through Local Evidence (AABLE)",
+      "source": "IDRC (Canada)",
+      "funder": "International Development Research Centre (IDRC)",
+      "url": "https://idrc-crdi.ca/en/funding/anticipatory-call-proposals-research-teams-adolescents-thrive-african-adolescents-bolstered",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "CAD692,000",
+      "geography": "Developing Countries / Global South",
+      "regions": [
+        "Africa",
+        "Global / Developing Countries"
+      ],
+      "countries": [
+        "Ethiopia",
+        "Ghana",
+        "Kenya",
+        "Liberia",
+        "Malawi",
+        "Mozambique",
+        "Nigeria",
+        "Senegal",
+        "Sierra Leone",
+        "Tanzania",
+        "Zambia",
+        "Zimbabwe"
+      ],
+      "description": "This call for proposals will support implementation research that addresses challenges in adolescent sexual and reproductive health in 13 African countries: Côte d’Ivoire, Ethiopia, Ghana, Kenya, Liberia, Malawi, Mozambique, Nigeria, Senegal, Sierra Leone, Tanzania, Zambia, and Zimbabwe. Projects must align with one of the following four priority themes: Theme 1: Service Delivery Models Theme 1: Service Delivery Models Theme 2: Social, Economic, or Multisectoral Policy Interventions Theme 2: Social, Economic, or Multisectoral Policy Interventions Theme 3: Data and Health Management Information Systems (HMIS) Theme 3: Data and Health Management Information Systems (HMIS) Theme 4: Digital Health Technologies Theme 4: Digital Health Technologies Up to eight grants, each with a maximum value of CAD692,000 will be awarded for a period of up to 30 months, including all research activities and the submission of the final report. Selected projects are anticipated to begin on November 1, 2025. Research teams from the selected African countries, working on adolescent sexual and reproductive health and rights. The teams need to meet the eligibility criteria outlined in the call. For more info…",
+      "themes": [
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "developing countries",
+        "africa",
+        "global south"
+      ],
+      "relevance_score": 25,
+      "opportunity_number": ""
+    },
+    {
       "id": "eusedia-dbeac7ebf173",
       "title": "Co-creating solutions for soil health in Living Labs",
       "source": "EU Funding & Tenders",
@@ -2013,6 +2795,35 @@
       ],
       "relevance_score": 18,
       "opportunity_number": "HORIZON-CL6-2025-01-CIRCBIO-15"
+    },
+    {
+      "id": "idrc-cac44def7cab",
+      "title": "Call for proposals for research teams: Human developmental biology – The Joint Canada-Israel Health Research Program Phase II (JCIHRP-II)",
+      "source": "IDRC (Canada)",
+      "funder": "International Development Research Centre (IDRC)",
+      "url": "https://idrc-crdi.ca/en/funding/call-proposals-research-teams-human-developmental-biology-joint-canada-israel-health",
+      "status": "Open",
+      "deadline": "2026-01-06",
+      "published": "",
+      "amount": "",
+      "geography": "Developing Countries / Global South",
+      "regions": [
+        "North America",
+        "Global / Developing Countries"
+      ],
+      "countries": [
+        "Canada"
+      ],
+      "description": "Registration deadline: January 6, 2026; 20:00 EST Application deadline: February 25, 2026; 20:00 EST For information on scope and eligibility, consult the detailed funding opportunity at CIHR’s ResearchNet . List of eligible LMIC countries .",
+      "themes": [
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "developing countries",
+        "global south"
+      ],
+      "relevance_score": 14,
+      "opportunity_number": ""
     },
     {
       "id": "eusedia-27de478ec0b7",
@@ -3489,6 +4300,71 @@
       ],
       "countries": [],
       "description": "The Asia Foundation’s Development Fellows program provides qualified young Asian professionals with an opportunity to strengthen their leadership skills and gain in-depth knowledge of Asia’s critical development challenges. The program offers two weeks of leadership training in Asia and another two weeks in the USA, plus a grant of US$2.500 to support individual plans for … Read more",
+      "themes": [
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "developing countries",
+        "global south"
+      ],
+      "relevance_score": 14,
+      "opportunity_number": ""
+    },
+    {
+      "id": "idrc-bd39c6827d22",
+      "title": "2026 International Joint Initiative for Research Harnessing Disruptive Technologies to Address Global Challenges",
+      "source": "IDRC (Canada)",
+      "funder": "International Development Research Centre (IDRC)",
+      "url": "https://idrc-crdi.ca/en/funding/2026-international-joint-initiative-research-harnessing-disruptive-technologies-address",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "Developing Countries / Global South",
+      "regions": [
+        "Africa",
+        "Asia",
+        "North America",
+        "Global / Developing Countries"
+      ],
+      "countries": [
+        "Canada",
+        "Ghana",
+        "Indonesia",
+        "Namibia",
+        "Rwanda",
+        "Zimbabwe"
+      ],
+      "description": "IDRC is participating in the 2026 International Joint Initiative for Research Harnessing Disruptive Technologies to Address Global Challenges. We encourage researchers and research institutions interested in this funding opportunity to consult the NFRF international joint initiative call site . The NFRF is under the strategic direction of the Canada Research Coordinating Committee. This webpage is intended to complement the full call site by providing additional information for project teams who wish to apply for funding from any of the five national funding agencies from Ghana, Indonesia, Namibia, Rwanda and Zimbabwe, whose participation is being coordinated by IDRC. Grants to researchers in any of these five countries will be managed by their respective national funding agencies. IDRC is providing a limited amount of supplementary funds to increase the funding available for grants by these agencies. Researchers and research institutions interested the 2026 International Joint Initiative for Research Harnessing Disruptive Technologies to Address Global Challenges. We invite you to consult the following guidance document in preparing your budget at the full application stage: Budge…",
+      "themes": [
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "developing countries",
+        "global south"
+      ],
+      "relevance_score": 14,
+      "opportunity_number": ""
+    },
+    {
+      "id": "idrc-f410f0d98d65",
+      "title": "Women’s Voice and Leadership Learning Partnership: Global Learning Hub",
+      "source": "IDRC (Canada)",
+      "funder": "International Development Research Centre (IDRC)",
+      "url": "https://idrc-crdi.ca/en/funding/womens-voice-and-leadership-learning-partnership-global-learning-hub",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "",
+      "geography": "Developing Countries / Global South",
+      "regions": [
+        "North America",
+        "Global / Developing Countries"
+      ],
+      "countries": [
+        "Canada"
+      ],
+      "description": "Global Affairs Canada and IDRC are supporting a Learning Partnership to enhance the efforts and impacts of the flagship Canadian program, Women’s Voice and Leadership, renewed in 2023. This call for proposals seeks to recruit the host organization (or consortium of organizations) for the Learning Partnership’s global learning hub. This hub will be responsible for facilitating a global community of practice for peer-to-peer learning and knowledge sharing among women’s rights organizations, LGBTQI+ groups and their networks. As a first step, the hub will facilitate a participatory design process to co-create a learning agenda — shared learning questions and priorities across regions — with renewed Women’s Voice and Leadership partners. The hub will then support the partners in co-implementing the learning agenda by facilitating multiple learning activities, including the use of innovative approaches. Based on analysis and synthesis, the hub will generate practical insights that can improve the partners’ practices and online/offline strategies. The hub will also administer an online portal for virtual exchanges between partners and share resources publicly on lessons learned and resul…",
       "themes": [
         "Rural Livelihoods & Equity"
       ],
@@ -5981,6 +6857,38 @@
       "fetched_at": "2026-11-24 08:40 UTC",
       "message": "Fetched 6 IKI calls and funding instruments.",
       "url": "https://www.international-climate-initiative.com/en/find-funding/"
+    },
+    {
+      "name": "IDRC (Canada)",
+      "ok": true,
+      "count": 12,
+      "fetched_at": "2026-11-24 11:27 UTC",
+      "message": "Fetched 12 open calls from IDRC.",
+      "url": "https://idrc-crdi.ca/en/funding"
+    },
+    {
+      "name": "Darwin Initiative (UK)",
+      "ok": true,
+      "count": 4,
+      "fetched_at": "2026-11-24 11:27 UTC",
+      "message": "Indexed 4 Darwin Initiative funding schemes (Round 32).",
+      "url": "https://www.darwininitiative.org.uk/apply/"
+    },
+    {
+      "name": "FFAR (Food & Ag Research)",
+      "ok": true,
+      "count": 12,
+      "fetched_at": "2026-11-24 11:27 UTC",
+      "message": "Fetched 12 FFAR opportunities.",
+      "url": "https://foundationfar.org/grants-funding/open-opportunities/"
+    },
+    {
+      "name": "Gates Grand Challenges",
+      "ok": true,
+      "count": 1,
+      "fetched_at": "2026-11-24 11:27 UTC",
+      "message": "Fetched 1 Grand Challenges items.",
+      "url": "https://gcgh.grandchallenges.org/grant-opportunities"
     }
   ]
 }

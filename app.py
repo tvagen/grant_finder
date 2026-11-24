@@ -37,6 +37,10 @@ else:
         "Terra Viva Grants",
         "FundsforNGOs",
         "IKI (Intl Climate Initiative)",
+        "IDRC (Canada)",
+        "Darwin Initiative (UK)",
+        "FFAR (Food & Ag Research)",
+        "Gates Grand Challenges",
     ]
 
 APP_DIR = Path(__file__).resolve().parent

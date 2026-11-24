@@ -36,6 +36,7 @@ else:
         "UKRI Funding Finder",
         "Terra Viva Grants",
         "FundsforNGOs",
+        "IKI (Intl Climate Initiative)",
     ]
 
 APP_DIR = Path(__file__).resolve().parent

@@ -624,7 +624,137 @@ async def fetch_funds_for_ngos(client: httpx.AsyncClient) -> tuple[list[Grant], 
 
 
 # ---------------------------------------------------------------------------
-# 6. Custom RSS / Atom feeds (user-configurable)
+# 6. IKI — International Climate Initiative (German Federal Government)
+# ---------------------------------------------------------------------------
+async def fetch_iki(client: httpx.AsyncClient) -> tuple[list[Grant], SourceStatus]:
+    base_url = "https://www.international-climate-initiative.com"
+    index_url = f"{base_url}/en/find-funding/"
+    grants: list[Grant] = []
+
+    # Known funding ranges from IKI's main instruments as clean defaults
+    instrument_amounts = {
+        "large-grants": "€5M – €15M",
+        "medium-grants": "€300,000 – €800,000",
+        "small-grants": "€60,000 – €200,000",
+        "thematic-call": "€5M – €20M",
+        "country-call": "€20M – €25M",
+        "iki-invest": "Multilateral Fund Contributions",
+    }
+
+    try:
+        resp = await client.get(index_url, follow_redirects=True)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        # Discover active "Apply now" call links + core instrument pages
+        targets: dict[str, str] = {}  # abs_url -> status_hint
+        for a in soup.find_all("a", href=True):
+            href = str(a["href"]).strip()
+            txt = " ".join(a.get_text(" ", strip=True).split()).lower()
+            if not href.startswith("/en/find-funding/"):
+                continue
+            full_url = f"{base_url}{href}"
+            if "apply now" in txt:
+                targets[full_url] = "Open"
+
+        # Ensure core instrument pages are included if no active "Apply now" sub-call exists for them
+        core_paths = [
+            "/en/find-funding/large-grants/",
+            "/en/find-funding/medium-grants/",
+            "/en/find-funding/small-grants/",
+            "/en/find-funding/thematic-call/",
+            "/en/find-funding/country-call/",
+            "/en/find-funding/iki-invest/",
+        ]
+        for path in core_paths:
+            if not any(path in u for u in targets):
+                targets[f"{base_url}{path}"] = "Forthcoming"
+
+        async def _fetch_call_page(url: str, status_hint: str) -> Grant | None:
+            try:
+                r = await client.get(url, follow_redirects=True)
+                r.raise_for_status()
+                psoup = BeautifulSoup(r.text, "html.parser")
+                main = psoup.find("main") or psoup
+                h1 = main.find("h1")
+                title = (
+                    " ".join(h1.get_text(" ", strip=True).split())
+                    if h1
+                    else (psoup.title.get_text(strip=True) if psoup.title else url)
+                )
+                if not title.lower().startswith("iki"):
+                    title = f"IKI — {title}"
+
+                paragraphs = [
+                    " ".join(p.get_text(" ", strip=True).split())
+                    for p in main.find_all(["p", "li"])
+                ]
+                body_text = " ".join(p for p in paragraphs if len(p) > 25)
+                desc = body_text[:1200].rstrip() + ("…" if len(body_text) > 1200 else "")
+                if not desc:
+                    desc = (
+                        "International Climate Initiative (IKI) funding instrument supporting "
+                        "climate mitigation, adaptation, natural carbon sinks, and biodiversity "
+                        "conservation in ODA-eligible developing and emerging countries."
+                    )
+
+                deadline = _extract_deadline_from_text(body_text)
+                default_amt = ""
+                for key, amt in instrument_amounts.items():
+                    if key in url:
+                        default_amt = amt
+                        break
+
+                low_body = body_text.lower()
+                if status_hint == "Open":
+                    status = "Open"
+                elif "currently closed" in low_body or "no open call" in low_body:
+                    status = "Forthcoming"
+                else:
+                    status = status_hint
+
+                g = Grant(
+                    id=_make_id("iki", url),
+                    title=title,
+                    source="IKI (Intl Climate Initiative)",
+                    funder="German Federal Government (IKI / ZUG)",
+                    url=url,
+                    status=status,
+                    deadline=deadline,
+                    amount=default_amt,
+                    geography="ODA-Eligible Developing & Emerging Countries",
+                    description=desc,
+                )
+                return score_and_tag_grant(g)
+            except Exception:
+                return None
+
+        pages = await asyncio.gather(
+            *(_fetch_call_page(u, st) for u, st in targets.items())
+        )
+        grants = [g for g in pages if g is not None]
+
+        return grants, SourceStatus(
+            name="IKI (Intl Climate Initiative)",
+            ok=len(grants) > 0,
+            count=len(grants),
+            fetched_at=_now_iso(),
+            message=f"Fetched {len(grants)} IKI calls and funding instruments.",
+            url=index_url,
+        )
+    except Exception as exc:
+        return [], SourceStatus(
+            name="IKI (Intl Climate Initiative)",
+            ok=False,
+            count=0,
+            fetched_at=_now_iso(),
+            message=f"Unavailable: {exc}",
+            url=index_url,
+        )
+
+
+# ---------------------------------------------------------------------------
+# 7. Custom RSS / Atom feeds (user-configurable)
 # ---------------------------------------------------------------------------
 async def fetch_custom_rss(
     client: httpx.AsyncClient, name: str, feed_url: str
@@ -683,6 +813,7 @@ BUILTIN_SOURCES: dict[str, Any] = {
     "UKRI Funding Finder": fetch_ukri,
     "Terra Viva Grants": fetch_terra_viva,
     "FundsforNGOs": fetch_funds_for_ngos,
+    "IKI (Intl Climate Initiative)": fetch_iki,
 }
 
 

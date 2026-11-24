@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 08:21 UTC",
+  "updated_at": "2026-11-24 08:40 UTC",
   "grants": [
     {
       "id": "eusedia-afe7710b1a85",
@@ -73,6 +73,39 @@
       "opportunity_number": ""
     },
     {
+      "id": "iki-b6c0484523cc",
+      "title": "IKI Invest",
+      "source": "IKI (Intl Climate Initiative)",
+      "funder": "German Federal Government (IKI / ZUG)",
+      "url": "https://www.international-climate-initiative.com/en/find-funding/iki-invest/",
+      "status": "Forthcoming",
+      "deadline": "",
+      "published": "",
+      "amount": "Multilateral Fund Contributions",
+      "geography": "ODA-Eligible Developing & Emerging Countries",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "IKI Invest exclusively supports multilateral initiatives and financing funds with the objective of Strengthening and effective further development of multilateral cooperation to protect the climate and biodiversity Strengthening and effective further development of multilateral cooperation to protect the climate and biodiversity Conceptualizing promising financing instruments for the mobilisation of private capital and investments in climate action and biodiversity conservation Conceptualizing promising financing instruments for the mobilisation of private capital and investments in climate action and biodiversity conservation Funds may pursue objectives within the four IKI funding areas listed below: Mitigation of greenhouse gas emissions Adaptation to the impacts of climate change Preservation of natural carbon sinks and mitigation of emissions by avoiding deforestation and forest degradation (REDD+) Conservation of biological diversity IKI contributions into funds can also cover more than one funding area. Funding via IKI Invest is subject to certain conditions: Partners are eligible if they are authorised for the fiduciary management of funds. Usually, these are international o…",
+      "themes": [
+        "Biodiversity & Ecosystems",
+        "Land & Forest Restoration",
+        "Climate & Carbon Finance"
+      ],
+      "matched_keywords": [
+        "biodiversity",
+        "conservation",
+        "deforestation",
+        "redd+",
+        "redd",
+        "climate change",
+        "greenhouse gas"
+      ],
+      "relevance_score": 86,
+      "opportunity_number": ""
+    },
+    {
       "id": "eusedia-a8f4f56b10bf",
       "title": "EU-African Union cooperation on agroforestry management for climate change adaptation and mitigation",
       "source": "EU Funding & Tenders",
@@ -132,6 +165,37 @@
         "local communities",
         "developing countries",
         "global south"
+      ],
+      "relevance_score": 58,
+      "opportunity_number": ""
+    },
+    {
+      "id": "iki-264266cc8d1c",
+      "title": "IKI — Small Grants 2026",
+      "source": "IKI (Intl Climate Initiative)",
+      "funder": "German Federal Government (IKI / ZUG)",
+      "url": "https://www.international-climate-initiative.com/en/find-funding/small-grants/small-grants-2026/",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "€60,000 – €200,000",
+      "geography": "ODA-Eligible Developing & Emerging Countries",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "In November, the Federal Ministry for the Environment, Climate Action, Nature Conservation and Nuclear Safety (BMUKN) launchs the eighth funding round of IKI Small Grants (ISG). The International Climate Initiative (IKI) supports projects that contribute to the implementation of the Paris Agreement and the Convention on Biological Diversity in developing and emerging countries. The IKI Small Grants programme supports local organisations in implementing effective climate and biodiversity projects. Since the programme began in 2019, around 200 organisations have been selected for funding. Through their project activities, approximately 70,000 people have so far been supported in effectively strengthening their resilience to the adverse impacts of climate change. This includes measures that help communities cope better with, or prevent, drought-related crop failures and flooding. Significant progress has also been made in biodiversity conservation. To date, approximately 100,000 hectares of terrestrial, marine and coastal ecosystems have been effectively protected or placed under sustainable management, for example through the introduction of resource-efficient practices. This area is…",
+      "themes": [
+        "Biodiversity & Ecosystems",
+        "Climate & Carbon Finance",
+        "Water & Watersheds"
+      ],
+      "matched_keywords": [
+        "biodiversity",
+        "ecosystem",
+        "conservation",
+        "climate change",
+        "drought"
       ],
       "relevance_score": 58,
       "opportunity_number": ""
@@ -287,6 +351,39 @@
         "biodiversity",
         "climate change",
         "developing countries",
+        "global south"
+      ],
+      "relevance_score": 51,
+      "opportunity_number": ""
+    },
+    {
+      "id": "iki-ff744707f045",
+      "title": "IKI — Medium Grants 2026",
+      "source": "IKI (Intl Climate Initiative)",
+      "funder": "German Federal Government (IKI / ZUG)",
+      "url": "https://www.international-climate-initiative.com/en/find-funding/medium-grants/medium-grants-2026/",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "€300,000 – €800,000",
+      "geography": "ODA-Eligible Developing & Emerging Countries",
+      "regions": [
+        "Europe",
+        "Global / Developing Countries"
+      ],
+      "countries": [
+        "Germany"
+      ],
+      "description": "The Federal Ministry for the Environment, Climate Protection, Nature Conservation and Nuclear Safety (BMUKN) is launching the seventh round of funding for the IKI Medium Grants (IMG). The IKI supports projects that contribute to the implementation of the Paris Agreement on Climate Change and the Convention on Biological Diversity in developing and emerging economies. Civil society organisations, academic institutions and not-for-profit organisations are particularly encouraged to apply for IKI Medium Grants. With a total budget of up to eight million euros, the German Government is providing funding to civil society organisations, academic institutions and not-for-profit organisations based in Germany that wish to implement innovative projects on climate protection and the conservation of biodiversity in collaboration with local partner organisations in the Global South. The ideas competition (call) opens on 13 October 2026 and closes on 12 January 2027 at 11.59 am (CET) . Funding will be provided for projects with a budget of between 300,000 and 800,000 euros and a duration of two to three years. The projects will be implemented in collaboration with partner organisations in one o…",
+      "themes": [
+        "Biodiversity & Ecosystems",
+        "Climate & Carbon Finance",
+        "Rural Livelihoods & Equity"
+      ],
+      "matched_keywords": [
+        "biodiversity",
+        "conservation",
+        "climate change",
         "global south"
       ],
       "relevance_score": 51,
@@ -1832,6 +1929,61 @@
         "developing countries",
         "africa",
         "global south"
+      ],
+      "relevance_score": 21,
+      "opportunity_number": ""
+    },
+    {
+      "id": "iki-ab508066fedc",
+      "title": "IKI — Large Grants 2026",
+      "source": "IKI (Intl Climate Initiative)",
+      "funder": "German Federal Government (IKI / ZUG)",
+      "url": "https://www.international-climate-initiative.com/en/find-funding/large-grants/large-grants-2026/",
+      "status": "Open",
+      "deadline": "",
+      "published": "",
+      "amount": "€5M – €15M",
+      "geography": "ODA-Eligible Developing & Emerging Countries",
+      "regions": [
+        "Global / Developing Countries"
+      ],
+      "countries": [],
+      "description": "The Federal Ministry for the Environment, Climate Action, Nature Conservation, and Nuclear Safety (BMUKN) and the Federal Foreign Office (AA) start a new round of funding for the IKI Large Grants (ILG). We are looking for project ideas that contribute to the implementation of international climate and biodiversity targets. Participation in the ideas competition of the ILG Call is open to both international and German grant recipients as well as contractors in the form of German federal implementing organisations. To take part, interested implementing organisations are invited to submit a project outline responding to one of the 9 thematic and country priorities listed below. A detailed description of the thematic and country priorities can be found in the document in the download section below. IKI Office Zukunft – Umwelt – Gesellschaft (ZUG) gGmbH Stresemannstraße 69-71 10963 Berlin Please submit written enquiries via the contact form . The deadline for submitting project outlines for this year's ideas competition is 09 February 2027, 2:00pm (CET). One to two projects per priority will be selected. The funding volume provided by the IKI can range from 7 to 15 million euros per pro…",
+      "themes": [
+        "Biodiversity & Ecosystems"
+      ],
+      "matched_keywords": [
+        "biodiversity",
+        "conservation"
+      ],
+      "relevance_score": 21,
+      "opportunity_number": ""
+    },
+    {
+      "id": "iki-bd02865bcbd4",
+      "title": "IKI — Thematic Call",
+      "source": "IKI (Intl Climate Initiative)",
+      "funder": "German Federal Government (IKI / ZUG)",
+      "url": "https://www.international-climate-initiative.com/en/find-funding/thematic-call/",
+      "status": "Forthcoming",
+      "deadline": "",
+      "published": "",
+      "amount": "€5M – €20M",
+      "geography": "ODA-Eligible Developing & Emerging Countries",
+      "regions": [
+        "Europe",
+        "Global / Developing Countries"
+      ],
+      "countries": [
+        "Germany"
+      ],
+      "description": "The IKI Thematic Calls address current challenges in climate action, adaptation and biodiversity conservation on an annual basis. For these challenges, the respective IKI ministries define new thematic priorities as a basis for submission of project outlines. The financing volume provided by the IKI can range from 5 to 20 million EUR per project depending on the thematic priority. 5 to 20 million euros (per thematic priority) Several organisations and/or companies in a consortium. See the selection criteria for details. Annual selection procedure Bilateral, regional or global Participation in the ideas competition of IKI Thematic Calls is open to the following organisations: Non-governmental organisations; Universities and research institutions; International intergovernmental organisations and institutions such as development banks; United Nations organisations and programmes; Implementing organisations of the Federal Republic of Germany; Partner country governments and individuals cannot participate in the ideas competition. The project selection procedure takes place in two phases. In the first phase (outline phase), interested implementing organisations are invited to submit pr…",
+      "themes": [
+        "Biodiversity & Ecosystems"
+      ],
+      "matched_keywords": [
+        "biodiversity",
+        "conservation"
       ],
       "relevance_score": 21,
       "opportunity_number": ""
@@ -5755,6 +5907,30 @@
       "matched_keywords": [],
       "relevance_score": 0,
       "opportunity_number": ""
+    },
+    {
+      "id": "iki-79f07f9c03fd",
+      "title": "IKI — Country Call",
+      "source": "IKI (Intl Climate Initiative)",
+      "funder": "German Federal Government (IKI / ZUG)",
+      "url": "https://www.international-climate-initiative.com/en/find-funding/country-call/",
+      "status": "Forthcoming",
+      "deadline": "",
+      "published": "",
+      "amount": "€20M – €25M",
+      "geography": "ODA-Eligible Developing & Emerging Countries",
+      "regions": [
+        "Europe",
+        "Global / Developing Countries"
+      ],
+      "countries": [
+        "Germany"
+      ],
+      "description": "In the Country Call, the International Climate Initiative (IKI) works with a partner government to develop thematic priorities for bilateral projects. This in-depth cooperation takes place mainly with the IKI priority countries. Country Calls aim to further develop the IKI portfolio in the country in question. In doing so, the focus is on the country-specific priorities derived from the Paris Agreement and the Convention on Biological Diversity (CBD). In most cases, two to three thematic priorities are set for each Country Call: one project is then to be implemented for each priority. The funding volume, which is provided by the IKI, is typically per thematic priority between EUR 8 and 30 million for each selected project. Several organisations and/or companies in a consortium. See the selection criteria for details. On an irregular basis, after bilateral coordination with IKI priority country Bilateral; the country is specified The following organisations are eligible for funding under the thematic selection procedure: non-governmental organisations; universities and research institutions from Germany and abroad; implementing organisations in the Federal Republic of Germany; insti…",
+      "themes": [],
+      "matched_keywords": [],
+      "relevance_score": 0,
+      "opportunity_number": ""
     }
   ],
   "statuses": [
@@ -5797,6 +5973,14 @@
       "fetched_at": "2026-11-24 08:21 UTC",
       "message": "Fetched 25 grants across FundsforNGOs feeds.",
       "url": "https://www2.fundsforngos.org"
+    },
+    {
+      "name": "IKI (Intl Climate Initiative)",
+      "ok": true,
+      "count": 6,
+      "fetched_at": "2026-11-24 08:40 UTC",
+      "message": "Fetched 6 IKI calls and funding instruments.",
+      "url": "https://www.international-climate-initiative.com/en/find-funding/"
     }
   ]
 }
